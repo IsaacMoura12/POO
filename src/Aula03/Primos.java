@@ -9,7 +9,7 @@ public class Primos {
     double sum = 0;
 
     for (int i = 1; i < n; i++) {
-        if(Primo_input.primo_input(i)== true){
+        if(Primo_input.is_primo(i)== true){
             sum = sum + i;
         }
     }
