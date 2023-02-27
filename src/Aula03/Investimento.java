@@ -1,5 +1,5 @@
 package Aula03;
-import Util.*;
+import util.*;
 
 
 public class Investimento {
