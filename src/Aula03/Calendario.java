@@ -1,6 +1,5 @@
 package Aula03;
-//import  static Util.Utils.*;  PARA IMPORTAR TODOS OS METODOS ESTATICOS DA CLASS 
-import Util.*;
+import util.*;
 
 public class Calendario {
     public static void main(String[] args) {
