@@ -25,14 +25,15 @@ public class Notas {
             notasf[i] = nota_f;
 
         }
-        System.out.println("Nota T  Nota P  Nota F");;
+        System.out.printf("%8s  %8s %12s","Nota T","Nota P","Nota F");;
+        System.out.println();
         for (int i = 0; i < turma.length; i++) {
             
-           System.out.printf("%.2f", turma[i][0]);
+           System.out.printf("%8.2f", turma[i][0]);
            System.out.print("    ");
-           System.out.printf("%.2f",turma[i][1]);
+           System.out.printf("%8.2f",turma[i][1]);
            System.out.print("    ");
-           System.out.printf("%.2f",notasf[i]);
+           System.out.printf("%8.2f",notasf[i]);
            System.out.println();
         
           }    
