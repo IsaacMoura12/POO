@@ -1,7 +1,7 @@
 package util;
 import java.util.Scanner;
 
-public class Utils {
+public class User_input {
 
 
     // validações testadas por verdade (se condição se verifica sai do ciclo)
