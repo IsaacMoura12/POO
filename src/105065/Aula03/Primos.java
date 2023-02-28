@@ -1,6 +1,6 @@
 package Aula03;
 import Aula02.Input;
-import util.*;
+import utils.*;
 
 
 public class Primos {
@@ -15,7 +15,7 @@ public class Primos {
         }
     }
     System.out.print("Soma dos primos:" + sum);
-    System.out.println("\n");;
+    System.out.println("\n");
 
     }
     

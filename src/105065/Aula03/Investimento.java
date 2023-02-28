@@ -1,11 +1,11 @@
 package Aula03;
-import util.*;
+import utils.*;
 
 
 public class Investimento {
     public static void main(String[] args) {
-        double montante = Utils.input_mul("Montante (positivo e múltiplo de 1000):", 0, 1000);
-        double juro = Utils.input_interval(" Juro ( entre 0 e 5 %):", 0, 5)/100;
+        double montante = User_input.input_mul("Montante (positivo e múltiplo de 1000):", 0, 1000);
+        double juro = User_input.input_interval(" Juro ( entre 0 e 5 %):", 0, 5)/100;
 
         for (int i = 1; i <= 12; i++) {
             double tmp = montante * juro;
