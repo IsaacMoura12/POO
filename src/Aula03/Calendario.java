@@ -1,14 +1,14 @@
 package Aula03;
-import util.*;
+import utils.*;
 
 public class Calendario {
     public static void main(String[] args) {
         String [] meses = {"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
 
         // input com validação:
-        int mes = Utils.input_interval_int("Mês: ", 1, 12);
-        int ano = Utils.readInt("Ano: ");
-        int dia = Utils.input_interval_int("Mês começa no dia da semana: ", 1, 7);
+        int mes = User_input.input_interval_int("Mês: ", 1, 12);
+        int ano = User_input.readInt("Ano: ");
+        int dia = User_input.input_interval_int("Mês começa no dia da semana: ", 1, 7);
 
         int diasMes = diasMes(mes,ano);
 
