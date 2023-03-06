@@ -14,22 +14,23 @@ public class Circle {
     }
 
     public String toString(){
-        return "Circle with radius:" + this.radius;
+        return "Circle with radius:" + radius;
     }
     
     public double perimeter(){
-        return 2 * Math.PI * this.radius;
+        return 2 * Math.PI * radius;
     }
 
     public double getRadius(){
-        return this.radius;
+        return radius;
     }
 
     public double area(){
-        return Math.PI * this.radius * this.radius;
+        return Math.PI * radius * radius;
     }
 
+    
     public boolean equals(Circle b){
-        return this.radius == b.getRadius();
+        return radius == b.getRadius();
     }
 }

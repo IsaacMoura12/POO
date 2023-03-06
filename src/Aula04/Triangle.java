@@ -22,33 +22,33 @@ public class Triangle {
     }
     
     public double perimeter(){
-        return this.side1 + this.side2 + this.side3;
+        return side1 + side2 + side3;
     }
 
     public double area(){
-        double s = this.perimeter()/2;
-        return Math.sqrt(s * (s-this.side1) * (s-this.side2) * (s-this.side3));
+        double s = perimeter()/2;
+        return Math.sqrt(s * (s-side1) * (s-side2) * (s-side3));
     }
 
     public double getSide1(){
-        return this.side1;
+        return side1;
     }
 
     public double getSide2(){
-        return this.side2;
+        return side2;
     }
     public double getSide3(){
-        return this.side3;
+        return side3;
     }
 
     @Override
     public String toString(){
-        return "Triangle with sides:" + this.side1 + " : " +  this.side2 + " : " + this.side3;
+        return "Triangle with sides:" + side1 + " : " +  side2 + " : " + side3;
     }
 
     
     public boolean equals(Triangle b){
-        return this.side1 == b.getSide1() && this.side2 == b.getSide2() && this.side3 == b.getSide3();
+        return side1 == b.getSide1() && side2 == b.getSide2() && side3 == b.getSide3();
     }
 
 }
