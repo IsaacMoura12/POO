@@ -166,4 +166,27 @@ public class User_input {
         }
     }
 
+    // transforma string em Acronimo
+    public static String toAcronym(String s){
+        String tmp = "";
+        String[] splited = s.split(" ");
+        for (int i = 0; i <= splited.length-1; i++) {
+            String a = splited[i];
+            int b = a.length();
+            
+
+            if(b>3){
+                String inicial = splited[i].substring(0,1);
+                tmp = tmp+inicial;
+            }
+        }
+        String acr = tmp.toUpperCase();
+        return acr;
+
+    }
+   
+    
+
+
+
 }
