@@ -73,4 +73,17 @@ public class User_input {
         return v;
     }
 
+    public static String input_str(String msg){
+        String v;
+        while(true){
+            System.out.print(msg);
+            v = sc.nextLine();
+            if(v.isEmpty()== false) break;
+                System.out.println("String Vazia!");
+            
+        }
+        return v;
+
+    }
+
 }
