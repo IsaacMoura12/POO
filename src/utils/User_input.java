@@ -1,6 +1,10 @@
 package utils;
 import java.util.Scanner;
 
+
+// Enumeração e Descrição das Funções: (TODO)
+
+
 public class User_input {
 
 
@@ -149,7 +153,7 @@ public class User_input {
 
     // junta os espaços numa String
     public static String removeSpaces(String s){
-        String new_s = s.trim().replaceAll(" +", " ");
+        String new_s = s.replace(" ", "");
         return new_s;
     }
 
