@@ -39,9 +39,13 @@ public class Rectangle {
 
     }
 
-    
-    public boolean equals(Rectangle b){
-        return length == b.getLength() && height == b.getHeight();
+    @Override
+    public boolean equals(Object other){
+        if(!(other instanceof Rectangle))
+        return false;
+        Rectangle that = (Rectangle) other;
+
+        return this.length == that.length && this.height == that.height;
     }
     
 }

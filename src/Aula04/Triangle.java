@@ -46,9 +46,13 @@ public class Triangle {
         return "Triangle with sides:" + side1 + " : " +  side2 + " : " + side3;
     }
 
-    
-    public boolean equals(Triangle b){
-        return side1 == b.getSide1() && side2 == b.getSide2() && side3 == b.getSide3();
+    @Override
+    public boolean equals(Object other){
+        if(!(other instanceof Triangle))
+        return false;
+        Triangle that = (Triangle) other;
+
+        return this.side1 == that.side1 && this.side2 == that.side2 && this.side3 == that.side3;
     }
 
 }

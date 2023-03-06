@@ -12,10 +12,6 @@ public class Circle {
         assert radius > 0;
         this.radius = radius;
     }
-
-    public String toString(){
-        return "Circle with radius:" + radius;
-    }
     
     public double perimeter(){
         return 2 * Math.PI * radius;
@@ -29,8 +25,17 @@ public class Circle {
         return Math.PI * radius * radius;
     }
 
-    
-    public boolean equals(Circle b){
-        return radius == b.getRadius();
+    @Override
+    public String toString(){
+        return "Circle with radius:" + radius;
+    }
+
+    @Override
+    public boolean equals(Object other){
+        if(!(other instanceof Circle))
+        return false;
+        Circle that = (Circle) other;
+
+        return this.radius == that.radius;
     }
 }
