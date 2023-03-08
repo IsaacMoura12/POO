@@ -15,7 +15,8 @@ class Car {
     }
 
     public void drive(int distance) {
-        //TODO: acumular distância percorrida
+        //acumular distância percorrida
+        this.kms += distance;
     }
 
 }

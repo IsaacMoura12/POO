@@ -15,7 +15,7 @@ class Car {
     }
 
     public void drive(int distance) {
-        //TODO: acumular distância percorrida
+        this.kms = this.kms + distance;
     }
 }
 
@@ -24,20 +24,26 @@ public class SimpleCarDemo {
     static Scanner sc = new Scanner(System.in);
 
     static void listCars(Car[] cars) {
-        // TODO: lista todos os carros registados
+        //lista todos os carros registados
         // Exemplo de resultado
         // Carros registados: 
         // Renault Megane Sport Tourer, 2015, kms: 35356
         // Toyota Camry, 2010, kms: 32456
         // Mercedes Vito, 2008, kms: 273891
+
+        System.out.println("Carros registados:");
+        for (int i = 0; i < cars.length; i++) {
+            System.out.printf("%s %s, %d, kms: %d\n", cars[i].make, cars[i].model, cars[i].year, cars[i].kms);
+            
+        }
     }
 
     public static void main(String[] args) {
 
-        Car[] cars = // TODO: completar
-        cars[0] = // TODO: completar
-        cars[1] = // TODO: completar
-        cars[2] = // TODO: completar
+        Car[] cars = new Car[3];
+        cars[0] = new Car("Ford", "Focus", 2020,35000);
+        cars[1] = new Car("BMW", "S1", 2023,20000);
+        cars[2] = new Car("Audio", "rs4", 2023,2);
 
         listCars(cars);
 
@@ -47,7 +53,8 @@ public class SimpleCarDemo {
             int kms = (int)Math.round(Math.random()*1000); // viagem até 1000 kms
             System.out.printf("Carro %d viajou %d quilómetros.\n", j, kms);
             
-            // TODO: adicionar viagem ao carro j
+            cars[j].drive(kms);
+            //System.out.printf("kms atualizados do carro %d: %d\n", j,cars[j].kms);
         }
 
         listCars(cars);
