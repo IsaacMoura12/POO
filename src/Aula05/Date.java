@@ -56,7 +56,7 @@ public boolean equals(Object other){
 
 }
 
-public boolean valid(int day, int month, int year){
+public static boolean valid(int day, int month, int year){
     if(year<= 0) return false;
     if(month< 1 || month>12) return false;
     if(day< 1 || day > monthDays(month, year)) return false;
@@ -64,17 +64,17 @@ public boolean valid(int day, int month, int year){
 
 }
 
-public boolean validMonth(int month){
+public static boolean validMonth(int month){
     return month>=1 && month<= 12;
 }
 
 
 
-public boolean isLeapYear(int year){
+public static boolean isLeapYear(int year){
     return ((year%4==0) && (year % 100 != 0)) || (year % 400 ==0);
 }
 
-public int monthDays(int month, int year){
+public static int monthDays(int month, int year){
     if(month == 2){
         if(isLeapYear(year)){
             return 29;
