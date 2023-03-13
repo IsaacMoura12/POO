@@ -10,6 +10,7 @@ public class Calendar {
 
     Calendar(int year, int weekday, int[][] events){
         assert weekday >=1 && weekday <=7;
+        assert year>=1;
         this.year = year;
         this.weekday = weekday;
         this.events = events;
