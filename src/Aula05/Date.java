@@ -21,10 +21,12 @@ public class Date {
 }
 
 public void set(int day, int month, int year){
-    if(valid(year,month,day)){
+    if(valid(day,month,year)){
         this.day = day;
         this.month = month;
         this.year = year;
+    } else{
+        System.out.println("\nData Inválida!");
     }
 }
 
@@ -43,7 +45,7 @@ public int getYear(){
 
 @Override
 public String toString(){
-    return String.format("%04d-%02d-%02d", this.day, this.month, this.year);
+    return String.format("%02d-%02d-%04d", this.day, this.month, this.year);
 
 }
 
@@ -61,7 +63,6 @@ public static boolean valid(int day, int month, int year){
     if(month< 1 || month>12) return false;
     if(day< 1 || day > monthDays(month, year)) return false;
     return true;
-
 }
 
 public static boolean validMonth(int month){

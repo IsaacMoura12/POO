@@ -7,7 +7,7 @@ public class TesteDate {
 
     public static void main(String[] args) {
 
-        Date date = new Date(1,1,0);  
+        Date date = new Date(1,1,1);  
         
         
         while(true){    // MENU
@@ -34,6 +34,7 @@ public class TesteDate {
 
             // OPTION 2 -> SHOW DATE
             } else if(option == 2){
+                System.out.println();
                 System.out.println(date);
                 
             // OPTION 3 -> INCREMENT DATE
