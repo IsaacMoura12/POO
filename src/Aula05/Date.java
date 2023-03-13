@@ -87,4 +87,41 @@ public int monthDays(int month, int year){
         return 31;
     }
 }
+
+public void increment(int days){
+    while(days >0){
+    if(day == monthDays(month, year)){
+        day =1;
+        if(month == 12){
+            month = 1;
+            year++;
+
+        }else{
+            month++;
+        }
+    } else{
+        day++;
+    }
+    days--;
+}
+}
+
+public void decrement(int days){
+    while(days > 0){
+    if(day == 1){
+        if(month ==1){
+            year--;
+            month = 12;
+            day = monthDays(month, year);
+        }else{
+            month--;
+            day = monthDays(month, year);
+        }
+    }else{
+        day--;
+    }
+    days--;
+}
+}
+
 }
