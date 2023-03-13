@@ -1,4 +1,5 @@
 package Aula05;
+
 import java.util.Scanner;
 
 public class TesteDate {
@@ -19,6 +20,8 @@ public class TesteDate {
             System.out.println("\nOption: ");
 
             int option = sc.nextInt();
+
+            // OPTION 1 -> CREATE NEW DATE
             if(option == 1){                                
                 System.out.println("\n(create new date)");
                 System.out.println("day: ");
@@ -28,19 +31,27 @@ public class TesteDate {
                 System.out.println("year: ");
                 int year = sc.nextInt();
                 date = new Date(day,month,year);
+
+            // OPTION 2 -> SHOW DATE
             } else if(option == 2){
                 System.out.println(date);
                 
+            // OPTION 3 -> INCREMENT DATE
             } else if ( option == 3){
                 System.out.println("\n(increment date)");
                 System.out.println("number of days: ");
                 int days = sc.nextInt();
                 date.increment(days);
+
+
+            // OPTION 4 -> DECREMENT DATE    
             } else if (option == 4){
                 System.out.println("\n(decrement date)");
                 System.out.println("number of days: ");
                 int days = sc.nextInt();
                 date.decrement(days);
+
+            // OPTION 0 -> EXIT   
             }else{
                 break;
             }
