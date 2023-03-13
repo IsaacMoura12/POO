@@ -7,7 +7,7 @@ public class TesteDate {
 
     public static void main(String[] args) {
 
-        Date date = new Date(1,1,1);  
+        DateYMD date = new DateYMD(1,1,1);  
         
         
         while(true){    // MENU
@@ -30,7 +30,7 @@ public class TesteDate {
                 int month = sc.nextInt();
                 System.out.println("year: ");
                 int year = sc.nextInt();
-                date = new Date(day,month,year);
+                date = new DateYMD(day,month,year);
 
             // OPTION 2 -> SHOW DATE
             } else if(option == 2){

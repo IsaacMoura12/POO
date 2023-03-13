@@ -11,12 +11,12 @@ package Aula05;
  * 
 */
 
-public class Date {
+public class DateYMD {
     private int day;
     private int month;
     private int year;
 
-    Date(int day, int month, int year){
+    DateYMD(int day, int month, int year){
     this.set(day,month,year);
 }
 
@@ -51,9 +51,9 @@ public String toString(){
 
 @Override
 public boolean equals(Object other){
-    if(!(other instanceof Date))
+    if(!(other instanceof DateYMD))
     return false;
-    Date that = (Date) other;
+    DateYMD that = (DateYMD) other;
     return this.year == that.year && this.month == that.month && this.day == that.day;
 
 }
