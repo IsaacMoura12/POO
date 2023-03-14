@@ -103,7 +103,7 @@ public class Calendar {
 
 
     
-    public void printCalendarFull() {
+    public String  printCalendarFull(Calendar calendar) {
         int month = 1;
     
         while (month <= 12) {
@@ -136,6 +136,17 @@ public class Calendar {
             month++;
     
         }
+        return "Sucesso!";
+    }
+
+
+    public String printCalendarMonth(int month){
+
+
+
+
+
+        return "Sucess!";
     }
     
 
