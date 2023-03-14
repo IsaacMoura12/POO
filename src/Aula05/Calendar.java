@@ -24,6 +24,10 @@ public class Calendar {
         return weekday;
     }
 
+    public int[][] getEvents(){
+        return events;
+    }
+
     
     public int getFirstWeekdayMonth(int month){
         assert month >= 1 && month <= 12;
@@ -103,7 +107,7 @@ public class Calendar {
 
 
     
-    public String  printCalendarFull(Calendar calendar) {
+    public String printCalendarFull(Calendar calendar) {
         int month = 1;
     
         while (month <= 12) {
@@ -114,7 +118,7 @@ public class Calendar {
             }
             System.out.println(header);
             System.out.println("Su Mo Tu We Th Fr Sa");
-            
+    
             int startWeekday = getFirstWeekdayMonth(month);
             for (int i = 1; i < startWeekday; i++) {
                 System.out.print("   ");
@@ -123,7 +127,11 @@ public class Calendar {
             int x = startWeekday - 1;
     
             for (int j = 1; j <= monthDays(month, year); j++) {
-                System.out.printf("%2d ", j);
+                if (events[month][j] > 0) {
+                    System.out.printf("%2d*", j); // update events
+                } else {
+                    System.out.printf("%2d ", j);
+                }
                 x = x + 1;
                 if (x >= 7) {
                     x = 0;
@@ -138,13 +146,38 @@ public class Calendar {
         }
         return "Sucesso!";
     }
+    
 
 
     public String printCalendarMonth(int month){
+        assert month >=1 && month<=12;
+        String[] meses = {"","January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+        String mes = meses[month] + " " + year;
+        for (int i = 0; i < (20 - mes.length() / 2); i++) {
+            System.out.print(" ");
+        }
+
+        System.out.println(mes);
+        System.out.println("Su Mo Tu We Th Fr Sa");
+
+        int startWeekday = getFirstWeekdayMonth(month);
+            for (int i = 1; i < startWeekday; i++) {
+                System.out.print("   ");
+            }
+
+            int x = startWeekday - 1;
 
 
-
-
+            for (int j = 1; j <= monthDays(month, year); j++) {
+                System.out.printf("%2d ", j);
+                x = x + 1;
+                if (x >= 7) {
+                    x = 0;
+                    System.out.println();
+                }
+    
+            }
+            System.out.println("\n");
 
         return "Sucess!";
     }
