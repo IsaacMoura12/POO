@@ -16,7 +16,7 @@ public class DateYMD {
     private int month;
     private int year;
 
-    DateYMD(int day, int month, int year){
+    public DateYMD(int day, int month, int year){
     this.set(day,month,year);
 }
 
