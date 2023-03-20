@@ -1,5 +1,7 @@
 package utils;
 import java.util.Scanner;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
 
 
 // Enumeração e Descrição das Funções: (TODO)
@@ -188,7 +190,28 @@ public class User_input {
         return acr;
 
     }
+
+
+
+    public static boolean isValidEmail(String email){
+        String regex = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$"; 
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(email);
+        return matcher.matches();
+    }
    
+    public static boolean isTelemovelPT(int tel){
+        String tmp = String.valueOf(tel);
+        char first = tmp.charAt(0);
+        if(tmp.length() == 9){
+            if(first == '9'){
+                return true;
+            }
+        }
+        return false;
+
+
+    }
     
 
 

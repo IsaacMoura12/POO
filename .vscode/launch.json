@@ -1,0 +1,189 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "Contagem",
+            "request": "launch",
+            "mainClass": "Aula02.Contagem",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "Energia",
+            "request": "launch",
+            "mainClass": "Aula02.Energia",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "Graus_C_to_F",
+            "request": "launch",
+            "mainClass": "Aula02.Graus_C_to_F",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "Investimento",
+            "request": "launch",
+            "mainClass": "Aula02.Investimento",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "MilhasKm",
+            "request": "launch",
+            "mainClass": "Aula02.MilhasKm",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "Pontos",
+            "request": "launch",
+            "mainClass": "Aula02.Pontos",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "Tempo",
+            "request": "launch",
+            "mainClass": "Aula02.Tempo",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "Triangulo",
+            "request": "launch",
+            "mainClass": "Aula02.Triangulo",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "Valores",
+            "request": "launch",
+            "mainClass": "Aula02.Valores",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "Velocidade",
+            "request": "launch",
+            "mainClass": "Aula02.Velocidade",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "Alto_baixo",
+            "request": "launch",
+            "mainClass": "Aula03.Alto_baixo",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "Calendario",
+            "request": "launch",
+            "mainClass": "Aula03.Calendario",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "Extra_String_Operations",
+            "request": "launch",
+            "mainClass": "Aula03.Extra_String_Operations",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "Extra_Strings",
+            "request": "launch",
+            "mainClass": "Aula03.Extra_Strings",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "Investimento(1)",
+            "request": "launch",
+            "mainClass": "Aula03.Investimento",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "Notas",
+            "request": "launch",
+            "mainClass": "Aula03.Notas",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "Primos",
+            "request": "launch",
+            "mainClass": "Aula03.Primos",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "CarDemo",
+            "request": "launch",
+            "mainClass": "Aula04.CarDemo",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "CashRegisterDemo",
+            "request": "launch",
+            "mainClass": "Aula04.CashRegisterDemo",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "Formas",
+            "request": "launch",
+            "mainClass": "Aula04.Formas",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "TestCalendar",
+            "request": "launch",
+            "mainClass": "Aula05.TestCalendar",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "TestImobiliaria",
+            "request": "launch",
+            "mainClass": "Aula05.TestImobiliaria",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "TesteDate",
+            "request": "launch",
+            "mainClass": "Aula05.TesteDate",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "TesteUniversidade",
+            "request": "launch",
+            "mainClass": "Aula06.TesteUniversidade",
+            "projectName": "POO_480452c"
+        }
+    ]
+}
