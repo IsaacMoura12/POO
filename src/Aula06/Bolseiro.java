@@ -32,7 +32,7 @@ public  void setBolsa(int valor){
 
 @Override
 public String toString(){
-    return "";
+    return String.format("%s; Orientador: %s Bolsa: %d", super.toString(), orientador,bolsa);
 }
 
     
