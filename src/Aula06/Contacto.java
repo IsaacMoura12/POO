@@ -8,7 +8,7 @@ public class Contacto {
     private int telemovel;
     private String email;
 
-
+    // Contacto completo
     public Contacto(Pessoa pessoa, int telemovel, String email){
         this.id = idgen++;
         assert pessoa instanceof Pessoa;
@@ -20,6 +20,25 @@ public class Contacto {
         assert isValidEmail(email) : "Email Inválido!";
         this.email = email;
 
+    }
+
+
+    // contacto apenas com telemovel
+    public Contacto(Pessoa pessoa, int telemovel){
+        this.id= idgen++;
+        this.pessoa = pessoa;
+
+        assert isTelemovelPT(telemovel);
+        this.telemovel = telemovel;
+    }
+
+    // Contacto apenas com email
+    public Contacto(Pessoa pessoa, String email){
+        this.id = idgen++;
+        this.pessoa = pessoa;
+
+        assert isValidEmail(email);
+        this.email = email;
     }
 
     public int getId(){
@@ -34,12 +53,18 @@ public class Contacto {
         return email;
     }
 
-    public Pessoa getNome(){
+    public Pessoa getPessoa(){
         return pessoa;
     }
 
+    // verificar se nao e feito com argumento contacto de entrada!
+    public String getNomePessoa(){
+        return this.getPessoa().getNome();
+    }
+    
 
-    public void setNome(Pessoa nome){
+
+    public void setPessoa(Pessoa nome){
         this.pessoa = nome;
     }
 
