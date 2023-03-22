@@ -25,7 +25,7 @@ public class Contactos {
         }
     }
 
-    public void removeContacto(int id){
+    public void removeContactoId(int id){
         int control = 0;
         for (int i = 0; i < lista.size(); i++) {
             if(lista.get(i).getId()==id){
@@ -34,7 +34,21 @@ public class Contactos {
                 control++;
             }       
         } if(control == 0){
-            System.out.println("Não existe contacto com o id" + id);
+            System.out.println("Não existe contacto com id" + id);
+        }
+
+    }
+
+    public void removeContacto(int telemovel){
+        int control = 0;
+        for (int i = 0; i < lista.size(); i++) {
+            if(lista.get(i).getTel()==telemovel){
+                lista.remove(i);
+                System.out.println("Contacto Removido.");
+                control++;
+            }       
+        } if(control == 0){
+            System.out.println("Não existe contacto com o telemovel" + telemovel);
         }
     }
 
@@ -54,23 +68,21 @@ public class Contactos {
     }
 
 
-    // usa o procurar contacto
-    public void alterarContactoId(int id){
+    public void alterarContactoId(int id,Pessoa pessoa, int tel, String email){
+        int control = 0;
         for (int i = 0; i < lista.size(); i++) {
             Contacto tmp = lista.get(i);
-            //if()
-            
+            if(tmp.getId()==id){
+                lista.get(i).setEmail(email);
+                lista.get(i).setPessoa(pessoa);
+                lista.get(i).setTel(tel);
+                control++;
+            }   
+        } if(control ==0){
+            System.out.println("Nenhum contacto com id " + id);
         }
 
     }
-
-    
-
-
-    public void alterarContactoNome(Contacto contacto, String nome){
-
-    }
-
 
     public void procurarContacto(String nome){
         int control = 0;
@@ -89,19 +101,29 @@ public class Contactos {
         
     }
 
-    public void procurarContacto(int id){
+    public void procurarContacto(int telemovel){
         int control = 0;
         for (int i = 0; i < lista.size(); i++) {
             Contacto tmp = lista.get(i);
-            if(tmp.getId()==id){
+            if(tmp.getTel()==telemovel){
                 control++;
                 System.out.println(tmp);
             }          
         } if(control == 0){
-            System.out.println("Contacto com id " + id + " não encontrado.");
+            System.out.println("Contacto com telemovel " + telemovel + " não encontrado.");
         }
     }
 
+    public List<Contacto> listarContactos(){
+        return lista;
+    }
 
-    
+    @Override
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+    for (Contacto c : lista) {
+        sb.append(c.toString()).append("\n");
+    }
+    return sb.toString();
+    } 
 }
