@@ -13,11 +13,6 @@ public class TesteContactos {
     private static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         Contactos contacts = new Contactos();
-        Aluno a1 = new Aluno("Isaac",100,new DateYMD(1, 1, 1),new DateYMD(1, 1, 1));
-        Professor p1 = new Professor("Paulo", 1000,new DateYMD(1, 1, 1),"Informática","Informática");
-        contacts.addContacto(new Contacto(a1,911021312,"isaac.moura@ua.pt"));
-        contacts.addContacto(new Contacto(p1,937416036,"email@ua.pt"));
-
 
 
         while(true){
@@ -43,11 +38,11 @@ public class TesteContactos {
                 if(select==1){
                     // NOME
                     System.out.println("Nome:");
-                    String nome = sc.next();
+                    String nome = sc.nextLine();
                     while(User_input.countDigits(nome)!=0 || nome.length()==0){
                         System.out.println("Nome Iválido!");
                         System.out.println("Nome:");
-                        nome = sc.next();
+                        nome = sc.nextLine();
                     }
 
                     // CC
@@ -118,12 +113,12 @@ public class TesteContactos {
 
                       // EMAIL
                       System.out.println("Insira endereço Email:");
-                      String email = sc.next();
+                      String email = sc.nextLine();
 
                       while(!(User_input.isValidEmail(email))){
                         System.out.println("Endereço Email Errado!");
                         System.out.println("Endereço Email:");
-                        email = sc.next();
+                        email = sc.nextLine();
                       }
 
                      // CRIAÇAO CONTACTO COMPLETO
@@ -136,11 +131,11 @@ public class TesteContactos {
 
                     // NOME
                     System.out.println("Nome:");
-                    String nome = sc.next();
+                    String nome = sc.nextLine();
                     while(User_input.countDigits(nome)!=0 || nome.length()==0){
                         System.out.println("Nome Iválido!");
                         System.out.println("Nome:");
-                        nome = sc.next();
+                        nome = sc.nextLine();
                     }
 
                     // CC
@@ -177,20 +172,20 @@ public class TesteContactos {
 
                     // CATEGORIA PROFESSOR
                     System.out.println("Categoria:");
-                    String cat = sc.next();
+                    String cat = sc.nextLine();
 
                     while(cat.length()==0){
                         System.out.println("Categoria:");
-                        cat = sc.next();
+                        cat = sc.nextLine();
                     }
 
                     // DEPARTAMENTO
                     System.out.println("Departamento:");
-                    String dep = sc.next();
+                    String dep = sc.nextLine();
 
                     while(dep.length()==0){
                         System.out.println("Departamento:");
-                        dep = sc.next();
+                        dep = sc.nextLine();
                     }
 
                     // CRIAR PROFESSOR
@@ -209,12 +204,12 @@ public class TesteContactos {
 
                     // EMAIL
                     System.out.println("Insira endereço Email:");
-                    String email = sc.next();
+                    String email = sc.nextLine();
 
                     while(!(User_input.isValidEmail(email))){
                       System.out.println("Endereço Email Errado!");
                       System.out.println("Endereço Email:");
-                      email = sc.next();
+                      email = sc.nextLine();
                     }
 
                     // CRIAÇAO CONTACTO COMPLETO
@@ -234,12 +229,10 @@ public class TesteContactos {
                 System.out.println("1 - Procurar por Telemóvel");
                 System.out.println("2 - Procurar por Email");
                 int select = sc.nextInt();
-                
+
                 if(select == 1){
                     System.out.println("Insira Telemóvel:");
                     int tele = sc.nextInt();
-                    
-
                     List<Contacto> match = contacts.procurarContacto(tele);
 
 
@@ -253,15 +246,10 @@ public class TesteContactos {
                         // para alterar é necessario verificar
                         // se estamos perante um prof ou aluno!!
 
+                        //Contacto tmp = match.get(0);
                         System.out.println(match.get(0));
-                        int index = match.get(0).getId();
-
-                        // TESTES:
-                        //System.out.println(a);
-                        //int index = contacts.procurarIndex(match.get(0).getId());
-                        //System.out.println(index);
-                        //int index = contacts.lista.indexOf(match.get(0));
-                        //System.out.println(contacts);
+                        int index = contacts.procurarIndex(match.get(0).getId());
+                        System.out.println(contacts);
 
                         System.out.println("\nContacto a alterar:");
                         System.out.println("1 - É Aluno");
@@ -271,11 +259,11 @@ public class TesteContactos {
                 if(choice==1){
                     // NOME
                     System.out.println("Nome:");
-                    String nome = sc.next();
+                    String nome = sc.nextLine();
                     while(User_input.countDigits(nome)!=0 || nome.length()==0){
                         System.out.println("Nome Iválido!");
                         System.out.println("Nome:");
-                        nome = sc.next();
+                        nome = sc.nextLine();
                     }
 
                     // CC
@@ -346,12 +334,12 @@ public class TesteContactos {
 
                       // EMAIL
                       System.out.println("Insira endereço Email:");
-                      String email = sc.next();
+                      String email = sc.nextLine();
 
                       while(!(User_input.isValidEmail(email))){
                         System.out.println("Endereço Email Errado!");
                         System.out.println("Endereço Email:");
-                        email = sc.next();
+                        email = sc.nextLine();
                       }
 
                      // CRIAÇAO CONTACTO COMPLETO
@@ -365,11 +353,11 @@ public class TesteContactos {
 
                     // NOME
                     System.out.println("Nome:");
-                    String nome = sc.next();
+                    String nome = sc.nextLine();
                     while(User_input.countDigits(nome)!=0 || nome.length()==0){
                         System.out.println("Nome Iválido!");
                         System.out.println("Nome:");
-                        nome = sc.next();
+                        nome = sc.nextLine();
                     }
 
                     // CC
@@ -406,20 +394,20 @@ public class TesteContactos {
 
                     // CATEGORIA PROFESSOR
                     System.out.println("Categoria:");
-                    String cat = sc.next();
+                    String cat = sc.nextLine();
 
                     while(cat.length()==0){
                         System.out.println("Categoria:");
-                        cat = sc.next();
+                        cat = sc.nextLine();
                     }
 
                     // DEPARTAMENTO
                     System.out.println("Departamento:");
-                    String dep = sc.next();
+                    String dep = sc.nextLine();
 
                     while(dep.length()==0){
                         System.out.println("Departamento:");
-                        dep = sc.next();
+                        dep = sc.nextLine();
                     }
 
                     // CRIAR PROFESSOR
@@ -438,12 +426,12 @@ public class TesteContactos {
 
                     // EMAIL
                     System.out.println("Insira endereço Email:");
-                    String email = sc.next();
+                    String email = sc.nextLine();
 
                     while(!(User_input.isValidEmail(email))){
                       System.out.println("Endereço Email Errado!");
                       System.out.println("Endereço Email:");
-                      email = sc.next();
+                      email = sc.nextLine();
                     }
 
                     // CRIAÇAO CONTACTO COMPLETO
@@ -476,7 +464,7 @@ public class TesteContactos {
 
                 }else if(select == 2){
                     System.out.println("Insira Email:");
-                    String email = sc.next();
+                    String email = sc.nextLine();
 
                 }else {
                     break;

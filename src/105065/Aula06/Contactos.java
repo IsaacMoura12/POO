@@ -70,14 +70,10 @@ public class Contactos {
 
     public void alterarContactoId(int id,Pessoa pessoa, int tel, String email){
         
-        int index = procurarIndex(id);
-
-        if(index !=-1){
-            lista.get(index).setEmail(email);
-            lista.get(index).setPessoa(pessoa);
-            lista.get(index).setTel(tel);
-        }
-        
+        int a = procurarIndex(id);
+        lista.get(a).setEmail(email);
+        lista.get(a).setPessoa(pessoa);
+        lista.get(a).setTel(tel);
 
         
         
