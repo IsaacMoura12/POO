@@ -39,6 +39,14 @@ public class Contactos {
 
     }
 
+    public void removeContactoIndex(int index){
+        if(lista.get(index)==null){
+            System.out.println("Não existe contacto neste indice!!");
+        }else {
+            lista.remove(index);
+        }
+    }
+
     public void removeContacto(int telemovel){
         int control = 0;
         for (int i = 0; i < lista.size(); i++) {
@@ -177,6 +185,21 @@ public class Contactos {
             return null;
         }
         
+    }
+
+    public List<Contacto> procurarContactoEmail(String email) {
+        List<Contacto> matchingContacts = new ArrayList<>();
+        for (int i = 0; i < lista.size(); i++) {
+            Contacto tmp = lista.get(i);
+            if(tmp.getEmail().equals(email)){
+                matchingContacts.add(tmp);
+            }
+        } 
+        if(!matchingContacts.isEmpty()){
+            return matchingContacts;
+        } else {
+            return null;
+        }
     }
 
     public List<Contacto> listarContactos(){
