@@ -84,7 +84,29 @@ public class Contactos {
 
     }
 
-    public void procurarContacto(String nome){
+    
+    public Contacto procurarContactoid(int id) {
+        for (Contacto c : lista) {
+            if (c.getId() == id) {
+                return c;
+            }
+        }
+        System.out.println("Contacto com id " + id + " não encontrado.");
+        return null;
+    }
+
+    public int procurarIndex(int id) {
+        for (int i = 0; i < lista.size(); i++) {
+            Contacto c = lista.get(i);
+            if (c.getId() == id) {
+                return i;
+            }
+        }
+        return -1;
+    }
+    
+
+    public void procurarContactotmp(String nome){
         int control = 0;
         for (int i = 0; i < lista.size(); i++) {
             Contacto tmp = lista.get(i);
@@ -101,7 +123,23 @@ public class Contactos {
         
     }
 
-    public void procurarContacto(int telemovel){
+
+    public List<Contacto> procurarContacto(String nome){
+        List<Contacto> matchingContacts = new ArrayList<>();
+        for (int i = 0; i < lista.size(); i++) {
+            Contacto tmp = lista.get(i);
+            if(tmp.getNomePessoa().equals(nome)){
+                matchingContacts.add(tmp);
+            }
+        } if(!(matchingContacts.isEmpty())){
+            return matchingContacts;
+        } else {
+            return null;
+        }
+
+    }
+
+    public void procurarContactotmp(int telemovel){
         int control = 0;
         for (int i = 0; i < lista.size(); i++) {
             Contacto tmp = lista.get(i);
@@ -114,9 +152,29 @@ public class Contactos {
         }
     }
 
+    public List<Contacto> procurarContacto(int telemovel){
+        List<Contacto> matchingContacts = new ArrayList<>();
+        for (int i = 0; i < lista.size(); i++) {
+            Contacto tmp = lista.get(i);
+            if(tmp.getTel()==telemovel){
+                matchingContacts.add(tmp); // add matching contacts to the list
+            }          
+        } if(!(matchingContacts.isEmpty())){
+            return matchingContacts;
+        } else {
+            return null;
+        }
+        
+    }
+
     public List<Contacto> listarContactos(){
         return lista;
     }
+
+    public int getSize(){
+        return lista.size();
+    }
+    
 
     @Override
     public String toString(){

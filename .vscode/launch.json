@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TesteConjunto",
+            "request": "launch",
+            "mainClass": "Aula06.TesteConjunto",
+            "projectName": "POO_bb10d2b9"
+        },
+        {
+            "type": "java",
+            "name": "TesteContactos",
+            "request": "launch",
+            "mainClass": "Aula06.TesteContactos",
+            "projectName": "POO_bb10d2b9"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
