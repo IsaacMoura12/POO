@@ -6,8 +6,9 @@ import java.util.List;
 
 
 // VERSAO INCOMPLETA!!
-//
-//
+// Ao adicionar contacto perguntar se quer adicionar se pessoa for igual
+// se ha dois ou mais contactos de retorno ( na pesquisa/remoção/alteração) perguntar qual operar (ID)
+// corrigir erros de formatação e validação de campos
 
 public class TesteContactos {
     private static Scanner sc = new Scanner(System.in);
