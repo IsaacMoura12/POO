@@ -69,18 +69,26 @@ public class Contactos {
 
 
     public void alterarContactoId(int id,Pessoa pessoa, int tel, String email){
-        int control = 0;
-        for (int i = 0; i < lista.size(); i++) {
-            Contacto tmp = lista.get(i);
-            if(tmp.getId()==id){
-                lista.get(i).setEmail(email);
-                lista.get(i).setPessoa(pessoa);
-                lista.get(i).setTel(tel);
-                control++;
-            }   
-        } if(control ==0){
-            System.out.println("Nenhum contacto com id " + id);
-        }
+        
+        int a = procurarIndex(id);
+        lista.get(a).setEmail(email);
+        lista.get(a).setPessoa(pessoa);
+        lista.get(a).setTel(tel);
+
+        
+        
+        //int control = 0;
+        //for (int i = 0; i < lista.size(); i++) {
+            //Contacto tmp = lista.get(i);
+            //if(tmp.getId()==id){
+                //lista.get(i).setEmail(email);
+                //lista.get(i).setPessoa(pessoa);
+                //lista.get(i).setTel(tel);
+                //control++;
+            //}   
+        //} if(control ==0){
+            //System.out.println("Nenhum contacto com id " + id);
+        //}
 
     }
 
@@ -97,8 +105,8 @@ public class Contactos {
 
     public int procurarIndex(int id) {
         for (int i = 0; i < lista.size(); i++) {
-            Contacto c = lista.get(i);
-            if (c.getId() == id) {
+            //Contacto c = lista.get(i);
+            if (lista.get(i).getId() == id) {
                 return i;
             }
         }

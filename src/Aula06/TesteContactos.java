@@ -5,6 +5,10 @@ import Aula05.DateYMD;
 import java.util.List;
 import java.util.ArrayList;
 
+// VERSAO INCOMPLETA!!
+//
+//
+
 public class TesteContactos {
     private static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
@@ -242,8 +246,10 @@ public class TesteContactos {
                         // para alterar é necessario verificar
                         // se estamos perante um prof ou aluno!!
 
-                        Contacto tmp = match.get(0);
-                        int index = contacts.procurarIndex(tmp.getId());
+                        //Contacto tmp = match.get(0);
+                        System.out.println(match.get(0));
+                        int index = contacts.procurarIndex(match.get(0).getId());
+                        System.out.println(contacts);
 
                         System.out.println("\nContacto a alterar:");
                         System.out.println("1 - É Aluno");
