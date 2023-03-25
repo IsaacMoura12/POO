@@ -1,8 +1,9 @@
 package Aula07;
 
 public abstract class Forma {
-    public void area(){};
-    public void perimeter(){};
+    public abstract double area();
+    public abstract double perimeter();
+    public String color;
 
     
 }

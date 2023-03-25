@@ -34,13 +34,13 @@ public class Circle extends Forma {
 
     @Override
     public String toString(){
-        return "Circle with radius: " + radius;
+        return "Circle with radius: " + radius + " and color " + color;
     }
 
 
     @Override
     public boolean equals(Object other){
-        if(!(other instanceof Forma))
+        if(!(other instanceof Circle))
         return false;
         Circle that = (Circle) other;
         return this.radius == that.radius && this.color.equals(that.color);

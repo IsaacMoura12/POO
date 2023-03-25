@@ -49,7 +49,18 @@ public class Triangle extends Forma{
 
     @Override
     public String toString(){
-        return "Triangle with sides:" + side1 + " : " +  side2 + " : " + side3;
+        return "Triangle with sides: " + side1 + " : " +  side2 + " : " + side3 + " and color " + color;
     }
+
+    @Override
+    public boolean equals(Object other){
+        if(!(other instanceof Triangle))
+        return false;
+        Triangle that = (Triangle) other;
+
+        return this.side1 == that.side1 && this.side2 == that.side2 && this.side3 == that.side3 && this.color.equals(that.color);
+    }
+
+
     
 }
