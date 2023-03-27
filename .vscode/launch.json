@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Avaliacao.Main",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
             "name": "TesteContactos",
             "request": "launch",
             "mainClass": "Aula06.TesteContactos",
