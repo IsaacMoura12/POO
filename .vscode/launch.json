@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TesteContactos",
+            "request": "launch",
+            "mainClass": "Aula06.TesteContactos",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
             "name": "TesteConjunto",
             "request": "launch",
             "mainClass": "Aula06.TesteConjunto",
