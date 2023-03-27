@@ -2,20 +2,14 @@ package Aula07;
 
 public class Circle extends Forma {
     private double radius;
-    private String color;
 
 
     Circle(double radius,String color){
+        super(color);
         assert radius >0;
         this.radius = radius;
-        assert color.length()>0;
-        this.color = color;
+        
     }
-
-    public String getColor(){
-        return color;
-    }
-
 
     public double getRadius(){
         return radius;

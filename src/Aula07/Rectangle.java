@@ -3,16 +3,14 @@ package Aula07;
 public class Rectangle extends Forma{
     private double height;
     private double length;
-    private String color;
 
 
     Rectangle(double height, double lenght ,String color){
+        super(color);
         assert this.height > 0;
         assert this.length > 0;
-        assert color.length() >0;
         this.height = height;
         this.length = lenght;
-        this.color = color;
     }
 
     @Override
@@ -33,9 +31,7 @@ public class Rectangle extends Forma{
         return length;
     }
 
-    public String getColor(){
-        return color;
-    }
+
 
     @Override
     public String toString(){

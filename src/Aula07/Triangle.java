@@ -4,10 +4,10 @@ public class Triangle extends Forma{
     private double side1;
     private double side2;
     private double side3;
-    private String color;
 
 
     Triangle(double side1, double side2, double side3, String color){
+        super(color);
         assert side1 > 0;
         assert side2 > 0;
         assert side3 > 0;
@@ -15,15 +15,8 @@ public class Triangle extends Forma{
         this.side1 = side1;
         this.side2 = side2;
         this.side3 = side3;
-        assert color.length()>0;
-        this.color= color;
     }
 
-
-    public String getColor(){
-        return color;
-
-    }
 
     public double getSide1(){
         return side1;
