@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TesteFormas",
+            "request": "launch",
+            "mainClass": "Aula07.TesteFormas",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "Avaliacao.Main",
