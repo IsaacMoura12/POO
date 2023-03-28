@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CarDemo",
+            "request": "launch",
+            "mainClass": "Aula04.CarDemo",
+            "projectName": "POO_bb10d2b9"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "Avaliacao.Main",
