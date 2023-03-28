@@ -32,7 +32,7 @@ public class Boxer extends Fighter {
 
     @Override
     public String toString(){
-        return "Fighter " + getNome() + " do tipo Boxer tem " + getVitorias() +  " e " + getDerrotas() +  " derrotas e alcance " + range;
+        return "Wrestler " + getNome() + " with range " + range + ": (" + getVitorias()+ "W / " + getDerrotas() + "L)";
 
     }
 

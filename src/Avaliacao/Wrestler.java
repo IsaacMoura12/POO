@@ -19,10 +19,11 @@ public class Wrestler extends Fighter{
         }
 
         public void attack(Fighter other){
+            int damage;
             Random generator = new Random();
             int distance = generator.nextInt(11);
             if(this.speed > distance){
-                int damage = generator.nextInt(99) + 1;
+                damage = generator.nextInt(99) + 1;
                 other.setVida(damage);
 
             }
@@ -32,7 +33,7 @@ public class Wrestler extends Fighter{
 
         @Override
         public String toString(){
-        return "Fighter " + getNome() + " do tipo Wrestler tem " + getVitorias() +  " e " + getDerrotas() +  " derrotas e velocidade " + speed;
+        return "Wrestler " + getNome() + " with speed " + speed + ": (" + getVitorias()+ "W / " + getDerrotas() + "L)";
 
     }
 

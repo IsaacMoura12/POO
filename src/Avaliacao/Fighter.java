@@ -33,7 +33,7 @@ public abstract class Fighter {
         return vitorias;
     }
 
-    public void setVitorias(int vitorias){
+    public void setVitorias(int ganhou){
         vitorias++;
     }
 
@@ -41,7 +41,7 @@ public abstract class Fighter {
         return derrotas;
     }
 
-    public void setDerrotas(int derrotas){
+    public void setDerrotas(int perdeu){
         derrotas++;
     }
 
@@ -59,7 +59,7 @@ public abstract class Fighter {
 
     @Override
     public String toString(){
-        return "Fighter " + nome + " tem " + vitorias +  " e " + derrotas +  " derrotas.";
+        return "Wrestler " + nome + " : (" + getVitorias()+ "W / " + getDerrotas() + "L)";
     }
 
 
