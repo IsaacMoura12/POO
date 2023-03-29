@@ -17,7 +17,8 @@ public class GameTester {
         int upperbound = 25;
         Robot[] robots2 = new Robot[5];
         Robot[] robots1 = new Robot[5];
-
+        Team team1 = new Team(null, null, lowerbound, upperbound, robots1);
+        Team team2 = new Team(null, null, lowerbound, upperbound, robots1);
 
         int choice = 0;
         while(true){
@@ -44,8 +45,8 @@ public class GameTester {
         }
 
 
-        Team team1 = new Team("Barcelona", "Messi", 0, 0, robots1);
-        Team team2 = new Team("Real Madrid", "Ronaldo", 0, 0, robots2);
+         team1 = new Team("Barcelona", "Messi", 0, 0, robots1);
+         team2 = new Team("Real Madrid", "Ronaldo", 0, 0, robots2);
 
 
         System.out.println("\nGame Starting\n");
@@ -63,6 +64,11 @@ public class GameTester {
         }
 
             } else if(choice==2){
+
+
+                // jogo:
+                Ball ball = new Ball(0, 0, 0, "White");
+                Game game = new Game(team1, team2, ball, 60 , 0);
 
             } else {
                 break;
