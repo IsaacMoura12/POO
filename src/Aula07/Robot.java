@@ -8,7 +8,7 @@ public class Robot extends ObjetoMovel{
 
 
 
-    Robot(int x, int y , int distance, String id, String type, int goals){
+    Robot(int x, int y , double distance, String id, String type, int goals){
         super(x,y,distance);
         assert id.length()>0;
         this.id = id;
@@ -52,7 +52,7 @@ public class Robot extends ObjetoMovel{
 
     @Override
     public String toString(){
-        return "Robot Id: " + id + " is at coordinates: (" + x + "," + y + ")" + " and distance:" + distance; 
+        return "Robot Id: " + id + " is " +  getType(); 
     }
 
     @Override

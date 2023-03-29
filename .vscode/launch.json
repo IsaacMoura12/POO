@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "GameTester",
+            "request": "launch",
+            "mainClass": "Aula07.GameTester",
+            "projectName": "POO_bb10d2b9"
+        },
+        {
+            "type": "java",
             "name": "CarDemo",
             "request": "launch",
             "mainClass": "Aula04.CarDemo",

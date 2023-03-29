@@ -44,10 +44,16 @@ public class Game {
         return time;
     }
 
+    public void elapsedTime(int ss){
+        duration--;
+        time++;
+
+    }
+
 
     // Acabar!
     @Override
     public String toString(){
-        return "";
+        return "Game between " + team1 + " and " + team2;
     }
 }
