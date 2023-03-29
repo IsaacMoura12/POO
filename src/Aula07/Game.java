@@ -44,8 +44,8 @@ public class Game {
         return time;
     }
 
-    public void elapsedTime(int ss){
-        duration--;
+    public void elapsedTime(){
+        
         time++;
 
     }

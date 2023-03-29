@@ -62,7 +62,7 @@ public class Team {
     // completar!
     @Override
     public String toString(){
-        return "Team: " + nome + " with captain " + captain;
+        return  nome;
     }
     
 }

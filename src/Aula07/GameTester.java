@@ -49,7 +49,6 @@ public class GameTester {
          team2 = new Team("Real Madrid", "Ronaldo", 0, 0, robots2);
 
 
-        System.out.println("\nGame Starting\n");
         System.out.println("Team1:\n");
         
         System.out.println(team1);
@@ -57,6 +56,7 @@ public class GameTester {
             System.out.println(robots1[j]);
         }
         System.out.println("\n");
+        System.out.println("Team2:\n");
         System.out.println(team2);
         for (int i = 0; i < robots2.length; i++) {
             System.out.println(robots2[i]);
@@ -66,9 +66,26 @@ public class GameTester {
             } else if(choice==2){
 
 
+            
+
                 // jogo:
                 Ball ball = new Ball(0, 0, 0, "White");
                 Game game = new Game(team1, team2, ball, 60 , 0);
+
+
+
+                System.out.println("\nGame Starting...\n");
+                System.out.println(team1 + " VS " + team2);
+                System.out.println("AINDA NAO IMPLEMENTADO!!");
+
+                while(game.time<=game.duration){
+
+
+
+
+
+                    game.elapsedTime();
+                }
 
             } else {
                 break;
