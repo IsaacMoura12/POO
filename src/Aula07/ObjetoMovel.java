@@ -46,6 +46,14 @@ public abstract class ObjetoMovel {
         // calcular distancia
     }
 
+    public double distanceTo(ObjetoMovel other){
+        int xx = other.getX();
+        int yy = other.getY();
+
+        double distance = Math.sqrt(((xx - this.x)*(xx - this.x)) + ((yy - this.y)*(yy - this.y)));
+        return distance;
+    }
+
     @Override
     public String toString(){
         return "Object is at coordinates: (" + x + "," + y + ")" + " and distance:" + distance; 
