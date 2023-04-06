@@ -25,6 +25,11 @@ public class PesadoMercadorias extends Veiculo {
         return peso;
     }
 
+    public void setPeso(int kg){
+        assert kg>=0;
+        this.peso = kg;
+    }
+
     
 
 @Override

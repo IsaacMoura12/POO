@@ -23,6 +23,10 @@ public class PesadoPassageiros extends Veiculo{
         return peso;
     }
 
+    public void setPeso(int kg){
+        this.peso = kg;
+    }
+
 
 @Override
     public String toString(){

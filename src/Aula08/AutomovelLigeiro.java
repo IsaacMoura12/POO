@@ -2,7 +2,6 @@ package Aula08;
 
 public class AutomovelLigeiro extends Veiculo{
 
-    protected String modelo;
     protected int bagageira;
 
 
@@ -14,13 +13,9 @@ public class AutomovelLigeiro extends Veiculo{
     }
 
    
-
     public int getBagageira(){
         return bagageira;
     }
-
-    
-
 
 
     @Override

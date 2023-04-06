@@ -1,6 +1,6 @@
 package Aula08;
 
-public class Motociclo extends Veiculo implements KmPercorridosInterface {
+public class Motociclo extends Veiculo {
     protected enum Tipo {
         desportivo, estrada
     }
@@ -8,17 +8,16 @@ public class Motociclo extends Veiculo implements KmPercorridosInterface {
     protected Tipo tipo;
 
 
-    Motociclo(String matricula, String marca, String modelo, int potencia, Tipo tipo){
-        super(matricula, marca,modelo, potencia, potencia);
+    Motociclo(String matricula, String marca, String modelo, int potencia, Tipo tipo, int quadrokm){
+        super(matricula, marca,modelo, potencia,quadrokm);
         this.tipo = tipo;
     }
-
-
   
-
     public Tipo getTipo(){
         return tipo;
     }
+
+    
 
     @Override
     public String toString(){

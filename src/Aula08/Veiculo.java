@@ -1,11 +1,13 @@
 package Aula08;
 
-public class Veiculo {
+public class Veiculo implements KmPercorridosInterface {
     protected String matricula;
     protected String marca;
     protected int potencia;
     protected int quadrokm;
     protected String modelo;
+    protected int distancia;
+    protected int ultimoTrajeto;
 
 
     Veiculo(String matricula, String marca,String modelo, int potencia, int quadrokm){
@@ -13,11 +15,36 @@ public class Veiculo {
         assert modelo.length()>0;
         assert potencia >0;
         assert matricula.length()>0;
+        assert quadrokm>=0;
+        this.quadrokm = quadrokm;
         this.marca = marca;
         this.matricula = matricula;
         this.potencia = potencia;
         this.modelo=modelo;
+        this.ultimoTrajeto = 0;
+        this.distancia = 0;
+
     }
+
+    @Override
+    public void trajeto(int kilometros){
+        assert kilometros>0;
+        this.ultimoTrajeto = kilometros;
+        this.distancia = this.distancia + kilometros;
+        setKms(kilometros);    
+
+    }
+
+    @Override
+    public int ultimoTrajeto(){
+        return ultimoTrajeto;
+    }
+
+    @Override
+    public int distanciaTotal(){
+        return distancia;
+    }
+
 
 
 
@@ -38,6 +65,10 @@ public class Veiculo {
     }
     public int getKms(){
         return quadrokm;
+    }
+
+    public void setKms(int km){
+        quadrokm = quadrokm + km;
     }
 
 
