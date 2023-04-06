@@ -21,25 +21,21 @@ public class TesteVeiculos {
         System.out.println(empresa);
         System.out.println("\nFrota:\n");
         empresa.listFrota();
+        System.out.println();
 
         // simular viagem
 
         for (int i = 0; i < frota.length; i++) {
             frota[i].trajeto(10);
             System.out.println(frota[i]);
-            System.out.println(frota[i].ultimoTrajeto());
+            System.out.println("último trajeto: " +frota[i].ultimoTrajeto());
         }
+        System.out.println();
 
 
         // ordenar por potencia
         Arrays.sort(frota);
         empresa.listFrota();
-
-
-
-
-
-
 
     }
     

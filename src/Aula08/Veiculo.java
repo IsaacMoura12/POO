@@ -1,6 +1,6 @@
 package Aula08;
 
-public class Veiculo implements KmPercorridosInterface, Comparable<Veiculo> {
+public abstract class Veiculo implements KmPercorridosInterface, Comparable<Veiculo> {
     protected String matricula;
     protected String marca;
     protected int potencia;
