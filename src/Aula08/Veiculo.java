@@ -1,6 +1,6 @@
 package Aula08;
 
-public class Veiculo implements KmPercorridosInterface {
+public class Veiculo implements KmPercorridosInterface, Comparable<Veiculo> {
     protected String matricula;
     protected String marca;
     protected int potencia;
@@ -86,6 +86,11 @@ public class Veiculo implements KmPercorridosInterface {
         return this.matricula.equals(that.matricula);
 
     }
+
+    @Override
+    public int compareTo(Veiculo other) {
+    return Integer.compare(other.potencia, this.potencia);
+}
 
 
 

@@ -37,8 +37,8 @@ public class Empresa {
         return frota;
     }
 
-    public void listFrota(Empresa empresa){
-        for (int i = 0; i < empresa.frota.length; i++) {
+    public void listFrota(){
+        for (int i = 0; i < this.frota.length; i++) {
             System.out.println(frota[i]);
             
         }
