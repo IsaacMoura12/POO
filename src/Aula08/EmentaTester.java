@@ -287,7 +287,8 @@ public class EmentaTester {
                     System.out.println("\nOption: ");
                     int select = sc.nextInt();
 
-                    if(select == 1){
+                    if(select==1){
+
 
                     }else if(select==2){
 
