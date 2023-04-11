@@ -1,7 +1,7 @@
 package Aula08;
 
 public class AlimentoNormal extends Alimento{
-    protected final boolean vegetariano = false;
+    protected  boolean vegetariano = false;
 
     AlimentoNormal(double proteina, double calorias, double peso){
         super(proteina, calorias, peso);

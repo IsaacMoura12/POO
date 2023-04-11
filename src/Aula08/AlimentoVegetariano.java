@@ -3,7 +3,7 @@ package Aula08;
 public abstract class AlimentoVegetariano extends Alimento {
 
     
-    protected final boolean vegetariano = true;
+    protected  boolean vegetariano = true;
 
 
     AlimentoVegetariano(double proteina, double calorias, double peso){
