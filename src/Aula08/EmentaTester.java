@@ -266,12 +266,7 @@ public class EmentaTester {
 
                     }
 
-
-
-
-
                 }
-
 
 
 
@@ -288,6 +283,7 @@ public class EmentaTester {
                     int select = sc.nextInt();
 
                     if(select==1){
+                        
 
 
                     }else if(select==2){
