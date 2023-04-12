@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "A08E02",
+            "request": "launch",
+            "mainClass": "Aula08.A08E02",
+            "projectName": "POO_bb10d2b9"
+        },
+        {
+            "type": "java",
             "name": "ShoppingCartTester",
             "request": "launch",
             "mainClass": "Aula08.ShoppingCartTester",

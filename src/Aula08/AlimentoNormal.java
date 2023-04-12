@@ -15,7 +15,7 @@ public class AlimentoNormal extends Alimento{
 
     @Override
     public String toString(){
-        return String.format("Proteínas %.1f, Calorias %1.f, Peso %1.f", proteina, calorias, peso);
+        return String.format("Proteínas %.1f, Calorias %.1f, Peso %.1f", proteina, calorias, peso);
     }
 
 

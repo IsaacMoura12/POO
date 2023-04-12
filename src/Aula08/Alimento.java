@@ -4,6 +4,7 @@ public abstract class Alimento {
     protected double proteina;
     protected double calorias;
     protected double peso;
+    protected boolean vegetariano;
 
 
     Alimento(double proteina, double calorias, double peso){
@@ -31,10 +32,14 @@ public abstract class Alimento {
         return peso;
     }
 
+    public boolean getVeg(){
+        return vegetariano;
+    }
+
 
     @Override
     public String toString(){
-        return String.format("Proteínas %.1f, Calorias %1.f, Peso %1.f", proteina, calorias, peso);
+        return String.format("Proteínas %.1f, Calorias %.1f, Peso %.1f", proteina, calorias, peso);
     }
     
 }

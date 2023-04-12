@@ -5,11 +5,21 @@ import java.util.List;
 
 public class PratoVegetariano extends Prato {
     protected String nome;
-    protected List<AlimentoVegetariano> prato;
+    protected List<Alimento> prato;
 
     PratoVegetariano(String nome){
         super(nome);
         prato = new ArrayList<>();
+    }
+
+    @Override
+    public boolean addAlimento(Alimento alimento){
+        if(alimento.getVeg()){
+            return prato.add(alimento);
+
+
+        }
+        return false;
     }
 
 

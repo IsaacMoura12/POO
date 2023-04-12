@@ -14,8 +14,8 @@ public class Prato  implements Comparable<Alimento>{
         prato = new ArrayList<>();
     }
 
-    public void addAlimento(Alimento alimento){
-        prato.add(alimento);
+    public boolean addAlimento(Alimento alimento){
+        return prato.add(alimento);
     }
 
 

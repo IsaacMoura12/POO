@@ -18,8 +18,8 @@ public class Ementa{
         ementa = new ArrayList<>();
     }
 
-    public void addPrato(Prato prato){
-        ementa.add(prato);
+    public void addPrato(Prato prato, int i){
+        ementa.add(i, prato);
     }
 
     public String getNome(){

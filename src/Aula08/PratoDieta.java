@@ -17,10 +17,11 @@ public class PratoDieta extends Prato{
     }
 
     @Override
-    public void addAlimento(Alimento alimento){
+    public boolean addAlimento(Alimento alimento){
         if(this.getCalorias() < maxCal){
-            prato.add(alimento);
+             return prato.add(alimento);
         }
+        return false;
     }
 
     public double getMaxCal(){
