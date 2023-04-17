@@ -1,6 +1,6 @@
 package Aula07;
 
-public abstract class Date {
+public abstract class Date  {
     protected int day;
     protected int month;
     protected int year;

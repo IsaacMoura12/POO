@@ -9,7 +9,7 @@ public class DateND extends Date {
     
 
 
-    DateND(int day, int month, int year, int daysSince){
+    public DateND(int day, int month, int year, int daysSince){
         super(day,month,year);
         this.daysSince = daysSince;
         increment(daysSince);

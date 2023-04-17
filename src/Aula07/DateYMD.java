@@ -2,7 +2,7 @@ package Aula07;
 
 public class DateYMD extends Date {
    
-    DateYMD(int day, int month, int year){
+    public DateYMD(int day, int month, int year){
         super(day,month,year);
     }
 

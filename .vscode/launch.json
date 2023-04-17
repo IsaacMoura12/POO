@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CollectionTester",
+            "request": "launch",
+            "mainClass": "Aula09.CollectionTester",
+            "projectName": "POO_dc7e2f0b"
+        },
+        {
+            "type": "java",
+            "name": "ALDemo",
+            "request": "launch",
+            "mainClass": "Aula09.ALDemo",
+            "projectName": "POO_dc7e2f0b"
+        },
+        {
+            "type": "java",
             "name": "A08E02",
             "request": "launch",
             "mainClass": "Aula08.A08E02",

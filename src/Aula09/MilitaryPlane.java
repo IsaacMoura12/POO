@@ -1,3 +1,6 @@
+package Aula09;
+
+
 public class MilitaryPlane extends Plane {
     private int numMissiles;
 

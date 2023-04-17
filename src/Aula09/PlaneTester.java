@@ -1,3 +1,5 @@
+package Aula09;
+
 import java.util.Scanner;
 
 public class PlaneTester {
