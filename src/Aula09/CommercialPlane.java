@@ -3,7 +3,7 @@ package Aula09;
 public class CommercialPlane extends Plane {
     private int numOfCrewMembers;
 
-    public CommercialPlane(String id, Maker fabricante, String modelo, int ano, int maxPassageiros, double maxVelocidade, int numOfCrewMembers) {
+    public CommercialPlane(String id, String fabricante, String modelo, int ano, int maxPassageiros, int maxVelocidade, int numOfCrewMembers) {
             super(id, fabricante, modelo, ano, maxPassageiros, numOfCrewMembers);
             assert numOfCrewMembers>0;
             this.numOfCrewMembers = numOfCrewMembers;        

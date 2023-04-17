@@ -2,7 +2,7 @@ package Aula09;
 
 public class  Plane {
     protected String id;
-    protected Maker fabricante;
+    protected String fabricante;
     protected String modelo;
     protected int ano;
     protected int maxPassageiros;
@@ -10,9 +10,10 @@ public class  Plane {
 
 
 
-    public Plane(String id, Maker fabricante, String modelo, int ano, int maxPassageiros, int maxVelocidade){
+    public Plane(String id, String fabricante, String modelo, int ano, int maxPassageiros, int maxVelocidade){
 
         assert id.length()>0;
+        assert fabricante.length()>0;
         assert modelo.length()>0;
         assert ano >0;
         assert maxPassageiros>0;
@@ -29,7 +30,7 @@ public class  Plane {
         return "";
     }
 
-    public Maker getFabricante(){
+    public String getFabricante(){
         return fabricante;
     }
 

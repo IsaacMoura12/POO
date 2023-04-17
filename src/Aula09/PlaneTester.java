@@ -57,23 +57,151 @@ public class PlaneTester {
     }
 
     private static void addPlane(PlaneManager planeManager, Scanner scanner) {
+
+        Plane plane;
+        //ID
+        System.out.println("Insert Aircraft ID:");
+        scanner.nextLine();
+        String id = scanner.nextLine();
+        while(id.length()==0){
+            System.out.println("Insert Aircraft ID:");
+            id = scanner.nextLine();
+        }
+
+        // FAB
+        System.out.println("Insert Aircraft Manufacturer:");
+        String fabricante = scanner.nextLine();
+        while(fabricante.length()==0){
+            System.out.println("Insert Aircraft Manufacturer:");
+            fabricante = scanner.nextLine();
+        }
+
+        // MODEL
+
+        System.out.println("Insert Aircraft Model:");
+        String modelo = scanner.nextLine();
+        while(modelo.length()==0){
+            System.out.println("Insert Aircraft Model:");
+            modelo = scanner.nextLine();
+        }
+
+        // ANO
+
+        System.out.println("Insert Aircraft Production Year");
+        int ano = scanner.nextInt();
+        while(ano<=0){
+            System.out.println("INVALID! Insert Aircraft Production Year");
+            ano = scanner.nextInt();
+
+        }
+
+        //MAXPAX
+
+        System.out.println("Insert Max Passengers:");
+        int maxPassageiros = scanner.nextInt();
+        while(maxPassageiros <=0){
+            System.out.println("INVALID! Insert Max Passengers:");
+            maxPassageiros = scanner.nextInt();
+        }
+
+        // MAX SPEED
+        System.out.println("Insert Max Speed:");
+        int maxVelocidade = scanner.nextInt();
+        while(maxVelocidade<=0){
+            System.out.println("INVÁLID! Insert Max Speed:");
+            maxVelocidade = scanner.nextInt();
+        }
+
+        System.out.println("Aircraft type:\n");
+        System.out.println("Commercial - 0");
+        System.out.println("Military - 1");
+
+        int option = scanner.nextInt();
+
+        while(option != 0 && option != 1){
+            System.out.println("Aircraft type:\n");
+            System.out.println("Commercial - 0");
+            System.out.println("Military - 1");
+            option = scanner.nextInt();
+        }
+
+
+        //COMERCIAL
+        if(option == 0){
+            System.out.println("Insert number of crew members:");
+            int crew = scanner.nextInt();
+            while(crew<=0){
+                System.out.println("INVALID! Insert number of crew members:");
+                crew = scanner.nextInt();
+            }
+
+             plane = new CommercialPlane(id, fabricante, modelo, ano, maxPassageiros, maxVelocidade, crew);
+             planeManager.addPlane(plane);
+
+        //MILITAR
+        } else if (option == 1){
+            System.out.println("Insert number of missiles:");
+            int missiles = scanner.nextInt();
+            while(missiles<=0){
+                System.out.println("INVALID! Insert number of missiles:");
+                missiles = scanner.nextInt();
+            }
+
+             plane = new MilitaryPlane(id, fabricante, modelo, ano, maxPassageiros, maxVelocidade, missiles);
+            planeManager.addPlane(plane);
+        } else {
+            plane = null;
+            System.out.println("ERROR!!!");
+        }
+
+        System.out.println("Aircraft Added!");
+        planeManager.printAllPlanes();
+
+
+        
+
+
     }
 
     private static void removePlane(PlaneManager planeManager, Scanner scanner) {
+
+        System.out.println("Insert plane ID to remove:");
+        scanner.nextLine();
+        String id = scanner.nextLine();
+        while(id.length()==0){
+            System.out.println("Insert plane ID to remove:");
+            id = scanner.nextLine();
+        }
+
+        planeManager.removePlane(id);
     }
 
     private static void searchPlane(PlaneManager planeManager, Scanner scanner) {
+
+        System.out.println("Insert plane ID to search:");
+        scanner.nextLine();
+        String id = scanner.nextLine();
+        while(id.length()==0){
+            System.out.println("Insert plane ID to search:");
+            id = scanner.nextLine();
+        }
+
+        planeManager.searchPlane(id);
     }
 
     private static void printAllPlanes(PlaneManager planeManager) {
+        planeManager.printAllPlanes();
     }
 
     private static void printCommercialPlanes(PlaneManager planeManager) {
+        planeManager.getCommercialPlanes();
     }
 
     private static void printMilitaryPlanes(PlaneManager planeManager) {
+        planeManager.getMilitaryPlanes();
     }
 
     private static void printFastestPlane(PlaneManager planeManager) {
+        planeManager.getFastestPlane();
     }
 }
