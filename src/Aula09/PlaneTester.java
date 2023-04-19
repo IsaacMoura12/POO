@@ -4,15 +4,13 @@ import java.util.Scanner;
 
 public class PlaneTester {
     public static void main(String[] args) {
-
         PlaneManager planeManager = new PlaneManager();
-
-        //Plane plane1 = new CommercialPlane("12", "12", "12", 12, 12, 12, 12);
-        //Plane plane2 = new CommercialPlane("123", "12", "12", 12, 12, 12, 12);
-        //planeManager.addPlane(plane2);
-        //planeManager.addPlane(plane1);
-        
         Scanner scanner = new Scanner(System.in);
+
+        Plane plane1 = new CommercialPlane("100", "Airbus", "a320", 2001, 190, 870, 6);
+        Plane plane2 = new CommercialPlane("101", "Airbus", "a320", 2001, 190, 870, 6);
+        planeManager.addPlane(plane2);
+        planeManager.addPlane(plane1);
         int choice;
 
         do {
@@ -31,9 +29,7 @@ public class PlaneTester {
 
             switch (choice) {
                 case 1:
-                    //Plane plane = new CommercialPlane("12", "airbus", "a330", 230, 330, 860, 12);
                     addPlane(planeManager, scanner);
-                    //planeManager.addPlane(plane);
                     break;
                 case 2:
                     removePlane(planeManager, scanner);
@@ -42,7 +38,6 @@ public class PlaneTester {
                     searchPlane(planeManager, scanner);
                     break;
                 case 4:
-                //planeManager.printAllPlanes();
                     printAllPlanes(planeManager);
                     break;
                 case 5:
@@ -67,8 +62,6 @@ public class PlaneTester {
     }
 
     private static void addPlane(PlaneManager planeManager, Scanner scanner) {
-        //Plane plane2 = new CommercialPlane("1223", "12", "12", 12, 12, 12, 12);
-        //planeManager.addPlane(plane2);
 
         Plane plane;
         //ID
@@ -167,7 +160,11 @@ public class PlaneTester {
         }
 
         System.out.println("Aircraft Added!");
+
+
         
+
+
     }
 
     private static void removePlane(PlaneManager planeManager, Scanner scanner) {
@@ -193,22 +190,27 @@ public class PlaneTester {
             id = scanner.nextLine();
         }
 
-        planeManager.searchPlane(id);
+        System.out.println(planeManager.searchPlane(id));
+        //planeManager.searchPlane(id);
     }
 
     private static void printAllPlanes(PlaneManager planeManager) {
-         planeManager.printAllPlanes();
+        System.out.println(planeManager.printAllPlanes());
+        //planeManager.printAllPlanes();
     }
 
     private static void printCommercialPlanes(PlaneManager planeManager) {
-        planeManager.getCommercialPlanes();
+        System.out.println(planeManager.getCommercialPlanes());
+        //planeManager.getCommercialPlanes();
     }
 
     private static void printMilitaryPlanes(PlaneManager planeManager) {
-        planeManager.getMilitaryPlanes();
+        System.out.println(planeManager.getMilitaryPlanes());
+        //planeManager.getMilitaryPlanes();
     }
 
     private static void printFastestPlane(PlaneManager planeManager) {
-        planeManager.getFastestPlane();
+        System.out.println(planeManager.getFastestPlane());
+        //planeManager.getFastestPlane();
     }
 }

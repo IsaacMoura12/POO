@@ -2,6 +2,7 @@ package Aula09;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Iterator;
 
 public class PlaneManager {
     private List<Plane> frota;
@@ -23,18 +24,19 @@ public class PlaneManager {
     }
 
     public void removePlane(String id){
-        int flag = 0;
-        for(Plane plane : frota){
-            if(plane.getId().equals(id)){
-                frota.remove(plane);
-                flag++;
-                System.out.println("Aircraft removed.");
-            }
+        Iterator<Plane> iterator = frota.iterator();
+    boolean found = false;
+    while (iterator.hasNext()) {
+        Plane plane = iterator.next();
+        if (plane.getId().equals(id)) {
+            iterator.remove();
+            found = true;
+            System.out.println("Aircraft removed.");
         }
-
-        if(flag==0){
-            System.out.println("No Aircraft with ID: " + id);
-        }
+    }
+    if (!found) {
+        System.out.println("No Aircraft with ID: " + id);
+    }
     }
 
 
@@ -48,19 +50,31 @@ public class PlaneManager {
         return null;
     }
 
-    public List<Plane> getCommercialPlanes(){
+    public String getCommercialPlanes(){
         frotaComercial = new ArrayList<>();
-
+        
         for(Plane plane : frota){
             if(plane.getPlaneType().equals("Commercial")){
                 frotaComercial.add(plane);
             }
         }
-        return frotaComercial;
+        if(frotaComercial.isEmpty()){
+            return "\nNo Commercial Aircrafts in the fleet!\n";
+        }
+
+
+        
+        StringBuilder sb = new StringBuilder();
+        sb.append("Commercial Aircraft List:\n");
+        for(Plane plane : frotaComercial){
+            sb.append(plane + "\n");
+        }
+        return sb.toString();
+
         
     }
 
-    public List<Plane> getMilitaryPlanes(){
+    public  String getMilitaryPlanes(){
         frotaMilitar = new ArrayList<>();
 
         for(Plane plane : frota){
@@ -68,7 +82,20 @@ public class PlaneManager {
                 frotaMilitar.add(plane);
             }
         }
-        return frotaMilitar;
+
+        if(frotaMilitar.isEmpty()){
+            return "\nNo Military Aircrafts in the fleet!\n";
+ 
+        }
+
+        StringBuilder sb = new StringBuilder();
+        sb.append("Military Aircraft List:\n");
+        for(Plane plane : frotaMilitar){
+            sb.append(plane + "\n");
+        }
+        return sb.toString();
+
+
         
     }
 
@@ -91,6 +118,7 @@ public class PlaneManager {
 
             }
         }
+        System.out.println("\nFastest Aircraft in the fleet:\n");
         return fastest;
     }
 
