@@ -4,7 +4,14 @@ import java.util.Scanner;
 
 public class PlaneTester {
     public static void main(String[] args) {
+
         PlaneManager planeManager = new PlaneManager();
+
+        //Plane plane1 = new CommercialPlane("12", "12", "12", 12, 12, 12, 12);
+        //Plane plane2 = new CommercialPlane("123", "12", "12", 12, 12, 12, 12);
+        //planeManager.addPlane(plane2);
+        //planeManager.addPlane(plane1);
+        
         Scanner scanner = new Scanner(System.in);
         int choice;
 
@@ -24,7 +31,9 @@ public class PlaneTester {
 
             switch (choice) {
                 case 1:
+                    //Plane plane = new CommercialPlane("12", "airbus", "a330", 230, 330, 860, 12);
                     addPlane(planeManager, scanner);
+                    //planeManager.addPlane(plane);
                     break;
                 case 2:
                     removePlane(planeManager, scanner);
@@ -33,6 +42,7 @@ public class PlaneTester {
                     searchPlane(planeManager, scanner);
                     break;
                 case 4:
+                //planeManager.printAllPlanes();
                     printAllPlanes(planeManager);
                     break;
                 case 5:
@@ -57,6 +67,8 @@ public class PlaneTester {
     }
 
     private static void addPlane(PlaneManager planeManager, Scanner scanner) {
+        //Plane plane2 = new CommercialPlane("1223", "12", "12", 12, 12, 12, 12);
+        //planeManager.addPlane(plane2);
 
         Plane plane;
         //ID
@@ -155,12 +167,7 @@ public class PlaneTester {
         }
 
         System.out.println("Aircraft Added!");
-        planeManager.printAllPlanes();
-
-
         
-
-
     }
 
     private static void removePlane(PlaneManager planeManager, Scanner scanner) {
@@ -190,7 +197,7 @@ public class PlaneTester {
     }
 
     private static void printAllPlanes(PlaneManager planeManager) {
-        planeManager.printAllPlanes();
+         planeManager.printAllPlanes();
     }
 
     private static void printCommercialPlanes(PlaneManager planeManager) {

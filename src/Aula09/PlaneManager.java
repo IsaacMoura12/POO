@@ -10,6 +10,7 @@ public class PlaneManager {
 
     public PlaneManager(){
         frota = new ArrayList<>();
+        
     }
 
     public void addPlane(Plane plane){

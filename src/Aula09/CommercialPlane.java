@@ -4,7 +4,7 @@ public class CommercialPlane extends Plane {
     private int numOfCrewMembers;
 
     public CommercialPlane(String id, String fabricante, String modelo, int ano, int maxPassageiros, int maxVelocidade, int numOfCrewMembers) {
-            super(id, fabricante, modelo, ano, maxPassageiros, numOfCrewMembers);
+            super(id, fabricante, modelo, ano, maxPassageiros, maxVelocidade);
             assert numOfCrewMembers>0;
             this.numOfCrewMembers = numOfCrewMembers;        
     }
