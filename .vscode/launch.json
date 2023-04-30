@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BookTester",
+            "request": "launch",
+            "mainClass": "Aula10.BookTester",
+            "projectName": "POO_bb10d2b9"
+        },
+        {
+            "type": "java",
             "name": "PlaneTester",
             "request": "launch",
             "mainClass": "Aula09.PlaneTester",
