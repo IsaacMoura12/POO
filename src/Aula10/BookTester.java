@@ -9,7 +9,52 @@ public class BookTester {
         Scanner sc = new Scanner(System.in);
 
         BookStore bookstore = new BookStore();
-        
+        Book book1 = new Book("The Lord of the Rings - The Fellowship of the Ring", "J.R.R Tolkien", "1954");
+        bookstore.addBook(book1, "High Fantasy");
+        Book book2 = new Book("The Lord of the Rings - The Two Towers", "J.R.R Tolkien", "1955");
+        bookstore.addBook(book2, "High Fantasy");
+        Book book3 = new Book("The Lord of the Rings - The Return of the King", "J.R.R Tolkien", "1955");
+        bookstore.addBook(book3, "High Fantasy");
+        Book book4 = new Book("The Silmarillion", "J.R.R Tolkien", "1977");
+        bookstore.addBook(book4, "High Fantasy");
+        Book book5 = new Book("The Hobbit", "J.R.R Tolkien", "1937");
+        bookstore.addBook(book5, "High Fantasy");
+        Book book6 = new Book("Unfinished Tales of Númenor and Middle-earth", "J.R.R Tolkien", "1980");
+        bookstore.addBook(book6, "High Fantasy");
+        Book book7 = new Book("The Children of Húrin", "J.R.R Tolkien", "2007");
+        bookstore.addBook(book7, "High Fantasy");
+
+        Book book8 = new Book("It", "Stephen King", "1986");
+        bookstore.addBook(book8, "Horror Fantasy");
+        Book book9 = new Book("The Shining", "Stephen King", "1977");
+        bookstore.addBook(book9, "Horror Fantasy");
+        Book book10 = new Book("Pet Sematery", "Stephen King", "1983");
+        bookstore.addBook(book10, "Horror Fantasy");
+        Book book11 = new Book("Carrie", "Stephen King", "1974");
+        bookstore.addBook(book11, "Horror Fantasy");
+
+
+        Book book12 = new Book("Crime and Punishment", "Fyodor Dostoevksy", "1866");
+        bookstore.addBook(book12, "Literary Fiction");
+        Book book13 = new Book("The Idiot", "Fyodor Dostoevksy", "1869");
+        bookstore.addBook(book13, "Novel");
+        Book book14 = new Book("Demons", "Fyodor Dostoevksy", "1872");
+        bookstore.addBook(book14, "Novel");
+        Book book15 = new Book("The Brothers Karamazov", "Fyodor Dostoevksy", "1880");
+        bookstore.addBook(book15, "Family Drama");
+        Book book16 = new Book("Notes from the Underground", "Fyodor Dostoevksy", "1864");
+        bookstore.addBook(book16, "Philosophical Fiction");
+
+        Book book17 = new Book("Harry Potter - Philosopher's Stone", "J.K Rowling", "1997");
+        bookstore.addBook(book17, "Fantasy Novel");
+        Book book18 = new Book("Harry Potter - Chamber of Secrets", "J.K Rowling", "1998");
+        bookstore.addBook(book18, "Fantasy Novel");
+
+
+
+
+
+
 
         System.out.println("Welcome to the Library.\n");
 
@@ -82,7 +127,7 @@ public class BookTester {
 
                     int select = sc.nextInt();
 
-
+                    sc.nextLine();
                     if (select == 1){
                         System.out.println("Book Title:");
                         String title = sc.nextLine();
@@ -92,8 +137,10 @@ public class BookTester {
                     title = sc.nextLine();
                     }
 
+                    System.out.println();
                     System.out.println("Found:");
-                    System.out.println(bookstore.searchBooksTitle(title));
+                    bookstore.searchBooksTitle(title);
+                    System.out.println();
                 
 
 
@@ -107,8 +154,10 @@ public class BookTester {
                     System.out.println("Book Author:");
                     author = sc.nextLine();}
 
+                    System.out.println();
                     System.out.println("Found:");
-                    System.out.println(bookstore.searchBooksAuthor(author));
+                    bookstore.searchBooksAuthor(author);
+                    System.out.println();
                     
 
 
@@ -123,8 +172,10 @@ public class BookTester {
                             year = sc.nextLine();
                         }
 
+                        System.out.println();
                         System.out.println("Found:");
-                        System.out.println(bookstore.searchBooksYear(year));
+                        bookstore.searchBooksYear(year);
+                        System.out.println();
 
 
                     } else if (select == 0){
@@ -163,15 +214,18 @@ public class BookTester {
                     year = sc.nextLine();
                 }
 
+                System.out.println();
                 Book book = new Book(title, author, year);
                 bookstore.removeBook(book);
-                System.out.println("Book Removed!");
+                
+                System.out.println();
 
                 // verificar caso de nao existir para remover
 
             } else if (option == 4){
 
 
+                sc.nextLine();
                 System.out.println("Book Genre:");
                 String genre = sc.nextLine();
 
@@ -179,13 +233,15 @@ public class BookTester {
                     System.out.println("Book Genre:");
                     genre = sc.nextLine();
                 }
+                System.out.println();
 
-                Genre ger = new Genre(genre);
+                //Genre ger = new Genre(genre);
 
-                bookstore.getRandomBookByGenre(ger);
+                bookstore.getRandomBookByGenre(genre);
 
             } else if (option == 5){
 
+                sc.nextLine();
                 System.out.println("Book Genre:");
                 String genre = sc.nextLine();
 
@@ -194,6 +250,7 @@ public class BookTester {
                     genre = sc.nextLine();
                 }
 
+                System.out.println();
                 System.out.println("Found:");
                 bookstore.getBooksByGenre(genre);
                 
@@ -206,6 +263,8 @@ public class BookTester {
 
     
             } else if (option == 7){
+                System.out.println();
+                System.out.println("\nGenres:\n");
 
                 bookstore.getAllGenres();
 

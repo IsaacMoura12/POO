@@ -2,7 +2,7 @@ package Aula10;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Genre {
+public class Genre implements Comparable<Genre> {
     protected String name;
     protected List<Book> books;
 
@@ -25,7 +25,14 @@ public List<Book> getBooks(){
 public void addBook(Book book){
     books.add(book);
 }
+@Override
+    public int compareTo(Genre o) {
+        return this.name.compareTo(o.name);
+    }
 
-
+@Override
+public String toString(){
+    return name;
+}
     
 }

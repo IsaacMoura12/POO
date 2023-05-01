@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
+
 
 public class BookStore {
     private Map<String, Genre> genres;
@@ -30,11 +30,20 @@ public class BookStore {
     }
 
     public void removeBook(Book book){
+        int flag =0;
         Genre genre = findGenreForBook(book);
         if (genre != null) {
             genre.getBooks().remove(book);
+            flag = 1;
         }
         books.remove(book);
+
+        if(flag ==0){
+            System.out.println("Book not Found!");
+
+        } else {
+            System.out.println("Book Removed");
+        }
     }
     public void updateBook(Book book, String newTitle, String newAuthor, String newYear) {
         book.setTitle(newTitle);
@@ -58,6 +67,7 @@ public class BookStore {
         for (Map.Entry<String, Genre> entry : genres.entrySet()) {
             String genreName = entry.getKey();
             Genre genre = entry.getValue();
+            System.out.println();
             System.out.println(genreName + ":");
             List<Book> books = genre.getBooks();
             if (books.isEmpty()) {
@@ -70,21 +80,18 @@ public class BookStore {
         }
     }
 
-    public void getRandomBookByGenre(Genre genre) {
-        List<Book> books = genre.getBooks();
-        Random random = new Random();
-    
-        // Check if the list of books is empty
-        if (books.isEmpty()) {
-            System.out.println("Genre does not exist!");
+    public void getRandomBookByGenre(String genreName) {
+        Genre genre = genres.get(genreName);
+        if (genre != null) {
+            List<Book> books = genre.getBooks();
+            if (!books.isEmpty()) {
+                int randomIndex = (int) (Math.random() * books.size());
+                System.out.println(books.get(randomIndex));
+                
+            } else {
+                System.out.println("Genre does not Exist!");
+            }
         }
-    
-        // Get a random index between 0 and the size of the list
-        int index = random.nextInt(books.size());
-    
-        // Return the book at the random index
-        System.out.println(books.get(index));
-        
     }
 
     public void getBooksByGenre(String genreName) {
@@ -113,7 +120,7 @@ public class BookStore {
         return results;
     }
 
-    public List<Book> searchBooksTitle(String searchTerm) {
+    public void searchBooksTitle(String searchTerm) {
         List<Book> results = new ArrayList<>();
         for (Book book : books) {
             if (book.getTitle().contains(searchTerm)) {
@@ -123,9 +130,9 @@ public class BookStore {
         for ( Book book : results){
             System.out.println(book);
         }
-        return results;
+        
     }
-    public List<Book> searchBooksAuthor(String searchTerm) {
+    public void searchBooksAuthor(String searchTerm) {
         List<Book> results = new ArrayList<>();
         for (Book book : books) {
             if (book.getAuthor().contains(searchTerm)) {
@@ -135,9 +142,9 @@ public class BookStore {
         for ( Book book : results){
             System.out.println(book);
         }
-        return results;
+        
     }
-    public List<Book> searchBooksYear(String searchTerm) {
+    public void searchBooksYear(String searchTerm) {
         List<Book> results = new ArrayList<>();
         for (Book book : books) {
             if (book.getYear().contains(searchTerm)) {
@@ -148,10 +155,7 @@ public class BookStore {
         for ( Book book : results){
             System.out.println(book);
         }
-        return results;
     }
-
-
 
 
 
