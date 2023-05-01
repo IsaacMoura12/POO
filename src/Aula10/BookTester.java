@@ -9,6 +9,7 @@ public class BookTester {
         Scanner sc = new Scanner(System.in);
 
         BookStore bookstore = new BookStore();
+        
 
         System.out.println("Welcome to the Library.\n");
 
@@ -20,8 +21,7 @@ public class BookTester {
             System.out.println("4 - Recommend Book by Genre");
             System.out.println("5 - List Book by Genre");
             System.out.println("6 - List all Books");
-            System.out.println("7 - List all Books and genres");
-            System.out.println("8 - List all Genres");
+            System.out.println("7 - List all Genres");
             System.out.println("0 - Quit");
             System.out.println("\nOption: ");
 
@@ -171,27 +171,43 @@ public class BookTester {
 
             } else if (option == 4){
 
-                // code 
+
+                System.out.println("Book Genre:");
+                String genre = sc.nextLine();
+
+                while(genre.length()==0){
+                    System.out.println("Book Genre:");
+                    genre = sc.nextLine();
+                }
+
+                Genre ger = new Genre(genre);
+
+                bookstore.getRandomBookByGenre(ger);
 
             } else if (option == 5){
 
-                // code 
+                System.out.println("Book Genre:");
+                String genre = sc.nextLine();
+
+                while(genre.length()==0){
+                    System.out.println("Book Genre:");
+                    genre = sc.nextLine();
+                }
+
+                System.out.println("Found:");
+                bookstore.getBooksByGenre(genre);
+                
+        
+
 
             } else if (option == 6){
 
-                //code
+                bookstore.listAllBooksByGenre();
 
+    
             } else if (option == 7){
 
-                //code 
-
-            } else if (option == 7){
-
-                //code
-
-            } else if (option == 8){
-
-                //code
+                bookstore.getAllGenres();
 
             } else if (option == 0){
                 break;

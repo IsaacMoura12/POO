@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 public class BookStore {
     private Map<String, Genre> genres;
@@ -45,12 +46,57 @@ public class BookStore {
         return books;
     }
 
-    public List<Book> getBooksByGenre(String genreName) {
+    public void getAllGenres() {
+        List<Genre> genreList = new ArrayList<>(genres.values());
+        for(Genre genre : genreList){
+            System.out.println(genre);
+        }
+        
+    }
+
+    public void listAllBooksByGenre() {
+        for (Map.Entry<String, Genre> entry : genres.entrySet()) {
+            String genreName = entry.getKey();
+            Genre genre = entry.getValue();
+            System.out.println(genreName + ":");
+            List<Book> books = genre.getBooks();
+            if (books.isEmpty()) {
+                System.out.println("\tNo books found for this genre.");
+            } else {
+                for (Book book : books) {
+                    System.out.println("\t" + book.getTitle() + " by " + book.getAuthor());
+                }
+            }
+        }
+    }
+
+    public void getRandomBookByGenre(Genre genre) {
+        List<Book> books = genre.getBooks();
+        Random random = new Random();
+    
+        // Check if the list of books is empty
+        if (books.isEmpty()) {
+            System.out.println("Genre does not exist!");
+        }
+    
+        // Get a random index between 0 and the size of the list
+        int index = random.nextInt(books.size());
+    
+        // Return the book at the random index
+        System.out.println(books.get(index));
+        
+    }
+
+    public void getBooksByGenre(String genreName) {
         Genre genre = genres.get(genreName);
-        if (genre != null) {
-            return genre.getBooks();
+        if (genre != null && !genre.getBooks().isEmpty()) {
+            List<Book> books = genre.getBooks();
+            for (Book book : books){
+                System.out.println(book.toString());
+            }
+            
         } else {
-            return new ArrayList<>();
+            System.out.println("No books found.");
         }
     }
 
@@ -60,6 +106,9 @@ public class BookStore {
             if (book.getTitle().contains(searchTerm) || book.getAuthor().contains(searchTerm) || book.getYear().contains(searchTerm)) {
                 results.add(book);
             }
+        }
+        for (Book book : results){
+            System.out.println(book);
         }
         return results;
     }
