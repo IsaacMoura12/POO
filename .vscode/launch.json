@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "FileText",
+            "request": "launch",
+            "mainClass": "Aula10.FileText",
+            "projectName": "POO_bb10d2b9"
+        },
+        {
+            "type": "java",
             "name": "StringAnalizer",
             "request": "launch",
             "mainClass": "Aula10.StringAnalizer",
