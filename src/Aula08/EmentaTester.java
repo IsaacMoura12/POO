@@ -25,11 +25,11 @@ public class EmentaTester {
         List <Peixe> peixes = new ArrayList<>();
         List <Cereal> cereais = new ArrayList<>();
         List <Legume> legumes = new ArrayList<>();
-        List<Prato> pratos = new ArrayList<>();
+        //List<Prato> pratos = new ArrayList<>();
 
 
 
-        Ementa ementa = new Ementa("Ementa", "Universidade Aveiro");
+        //Ementa ementa = new Ementa("Ementa", "Universidade Aveiro");
 
 
 
