@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BookTester",
+            "request": "launch",
+            "mainClass": "Aula10.BookTester",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "AdjacentWords",
+            "request": "launch",
+            "mainClass": "Aula11.AdjacentWords",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "AdjecentWords",
+            "request": "launch",
+            "mainClass": "Aula11.AdjecentWords",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "WordPairsCounter",
+            "request": "launch",
+            "mainClass": "Aula11.WordPairsCounter",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "FileText",
+            "request": "launch",
+            "mainClass": "Aula10.FileText",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "WordDuos",
+            "request": "launch",
+            "mainClass": "Aula11.WordDuos",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
             "name": "FileText",
             "request": "launch",
             "mainClass": "Aula10.FileText",
