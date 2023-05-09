@@ -26,4 +26,10 @@ public class Customer {
     public void setMeterReadings(List<Double> meterReadings) {
         this.meterReadings = meterReadings;
     }
+
+
+    @Override
+    public String toString(){
+        return "Customer " + this.getCustomerId() + " | " + this.getMeterReadings();
+    }
 }
