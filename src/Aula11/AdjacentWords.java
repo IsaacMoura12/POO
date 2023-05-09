@@ -11,7 +11,7 @@ public class AdjacentWords {
         String separators = "[\\s.,:'‘’;?!-*{}=+&/()”“\"\']+"; // split by whitespace or punctuation
         Map<String, TreeMap<String, Integer>> adjacentWords = new TreeMap<>();
 
-        try (Scanner scanner = new Scanner(new File("major.txt"))) {
+        try (Scanner scanner = new Scanner(new File("src/Aula11/major.txt"))) {
             scanner.useDelimiter(separators);
 
             String previousWord = "";
