@@ -12,6 +12,7 @@ public class EnergyUsageReportTester {
         //
         //
         //
+        // teste
         
         // Load the customer data from a text file using the load() method
         energyReport.load("clients.txt");
