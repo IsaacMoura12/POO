@@ -3,7 +3,8 @@ A5	HOP!
 AEA	Air Europa
 DT	TAAG
 EV	Evelop Airlines
-EZ	EasyJet Airlines
+EZY	EasyJet Airlines
+EZS	EasyJet Switzerland
 FR	Ryanair
 IB	Iberia
 LG	Luxair

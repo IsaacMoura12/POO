@@ -10,6 +10,7 @@ public class AirportTester {
         report.loadCompanhias("src/Aula11/companhias.txt");
         report.loadVoos("src/Aula11/voos.txt");
 
+
         report.generateReport("src/Aula11/Infopublico.txt");
         //report.generateReport();
     }

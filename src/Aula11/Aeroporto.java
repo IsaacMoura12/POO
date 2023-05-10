@@ -8,7 +8,8 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-
+import java.util.List;
+import java.util.ArrayList;
 
 public class Aeroporto {
     private Map<String,Companhia> companhias;
@@ -51,19 +52,37 @@ public class Aeroporto {
             while(sc.hasNextLine()){
                 String line = sc.nextLine();
                 String[] data = line.split("\t");
+                for(String i : data){
+                    System.out.println(i);
+                }
                 String sigla = data[0];
                 String name = data[1];
                 Companhia companhia = new Companhia(name, sigla);
                 companhias.put(sigla, companhia);
             }
+            
         } catch (FileNotFoundException e){
             System.out.println("File not Found" + e.getMessage());
         }
     }
 
     public String getCompanyName(String f_number, Map<String, Companhia> companhias){
-        String name = f_number.replaceAll("[^a-zA-Z]", "");
+        String name = f_number.substring(0, 3);
+        char c2 = name.charAt(1);
+        char c3 = name.charAt(2);
+        if(Character.isDigit(c2) && Character.isDigit(c3)){
+            name = f_number.substring(0, 2);
+        }
+        if(c3 == '\u0000'){
+            name = f_number.substring(0, 2);
+
+        }
+        System.out.println(name);
         Companhia comp = companhias.get(name);
+        if(comp == null){
+            return null;
+        }
+        System.out.println(comp.getName());
         return comp.getName();
     }
 
@@ -77,6 +96,9 @@ public class Aeroporto {
     }
 
     private int getTimeInMinutes(String time) {
+        if(time.isEmpty()){
+            return 0;
+        }
         String[] parts = time.split(":|\\."); // Split the time string into hours and minutes parts
         int hours = Integer.parseInt(parts[0]); // Convert the hours part to an integer
         int minutes = Integer.parseInt(parts[1]); // Convert the minutes part to an integer
@@ -93,6 +115,7 @@ public class Aeroporto {
                 Voo voo = entry.getValue();
                 String hora = voo.getTime();
                 String f_number = voo.getNumber();
+                System.out.println(f_number);
                 String name = getCompanyName(f_number, companhias);
                 String origin = voo.getOrigin();
                 String delay = voo.getDelay();

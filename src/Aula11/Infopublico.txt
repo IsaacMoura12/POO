@@ -1,0 +1,95 @@
+Hora            Voo             Companhia       Origem          Atraso          Obs            
+16:10           A5 9740         null            Clermont-Ferrand                 Previsto:16:10 
+15:35           AEA1143         Air Europa      Madrid                          Previsto:15:35 
+07:00           AEA1147         Air Europa      Madrid                          Previsto:07:00 
+18:45           DT 654          null            Luanda          00:10           Previsto:18:55 
+18:35           EVE5704         null            Palma Mallorca                  Previsto:18:35 
+14:35           EZS1133         EasyJet Switzerland Basel           00:33           Previsto:15:08 
+18:50           EZS1455         EasyJet Switzerland Geneva                          Previsto:18:50 
+12:40           EZY1131         EasyJet Airlines Basel           00:48           Previsto:13:28 
+11:30           EZY1451         EasyJet Airlines Geneva                          Previsto:11:30 
+22:45           EZY1457         EasyJet Airlines Geneva                          Previsto:22:45 
+17:10           EZY1747         EasyJet Airlines Toulouse, Blagnac                 Previsto:17:10 
+09:50           EZY1989         EasyJet Airlines Manchester      00:28           Previsto:10:18 
+14:25           EZY2097         EasyJet Airlines London, Luton                   Previsto:14:25 
+07:55           EZY3771         EasyJet Airlines Paris, Ch. de Gaulle 00:33           Previsto:08:28 
+22:25           EZY3775         EasyJet Airlines Paris, Ch. de Gaulle 00:09           Previsto:22:34 
+17:00           EZY4445         EasyJet Airlines Lyon, St. Exupery                 Previsto:17:00 
+15:15           EZY8497         EasyJet Airlines London, Gatwick                 Previsto:15:15 
+08:15           FR 1386         null            Brussels, Charleroi                 Previsto:08:15 
+13:30           FR 1671         null            Lisboa                          Previsto:13:30 
+08:50           FR 2094         null            Lisboa                          Previsto:08:50 
+20:40           FR 2096         null            Lisboa                          Previsto:20:40 
+15:45           FR 2632         null            Ponta Delgada   00:20           Previsto:16:05 
+15:20           FR 2928         null            Brussels                        Previsto:15:20 
+08:20           FR 4171         null            Frankfurt, Hahn                 Previsto:08:20 
+22:10           FR 4503         null            Lille           00:21           Previsto:22:31 
+16:30           FR 4565         null            Paris, Vatry                    Previsto:16:30 
+10:55           FR 4585         null            Barcelona                       Previsto:10:55 
+22:40           FR 4599         null            Memmingen                       Previsto:22:40 
+12:15           FR 4702         null            Milan/Bergamo                   Previsto:12:15 
+19:45           FR 5429         null            Tenerife Sur    00:12           Previsto:19:57 
+07:40           FR 5451         null            Faro                            Previsto:07:40 
+09:35           FR 5482         null            Madrid                          Previsto:09:35 
+20:00           FR 5484         null            Madrid                          Previsto:20:00 
+21:25           FR 5487         null            Faro                            Previsto:21:25 
+18:15           FR 6295         null            Clermont-Ferrand                 Previsto:18:15 
+20:55           FR 6531         null            Marseille       00:30           Previsto:21:25 
+14:55           FR 7228         null            Valencia                        Previsto:14:55 
+16:40           FR 7467         null            Saint Etienne   00:43           Previsto:17:23 
+14:50           FR 7473         null            Eindhoven       00:10           Previsto:15:00 
+22:55           FR 7475         null            Paris, Beauvais                 Previsto:22:55 
+16:30           FR 7716         null            Carcassonne     00:04           Previsto:16:34 
+11:50           FR 8343         null            London, Stansted 00:31           Previsto:12:21 
+23:20           FR 8347         null            London, Stansted                 Previsto:23:20 
+11:35           FR 9134         null            Paris, Beauvais 00:24           Previsto:11:59 
+22:35           FR 9205         null            Hamburg                         Previsto:22:35 
+07:35           IB 8720         null            Madrid          00:25           Previsto:08:00 
+16:30           IB 8722         null            Madrid                          Previsto:16:30 
+11:45           IB 8726         null            Madrid                          Previsto:11:45 
+18:35           LG 3767         null            Luxembourg                      Previsto:18:35 
+11:10           LH 1176         null            Frankfurt       00:03           Previsto:11:13 
+15:20           LH 1178         null            Frankfurt                       Previsto:15:20 
+22:35           LH 1180         null            Frankfurt                       Previsto:22:35 
+18:45           LX 2064         null            Zurich                          Previsto:18:45 
+19:35           LX 2078         null            Geneva                          Previsto:19:35 
+08:30           S4 370          null            Toronto, Pearson 00:35           Previsto:09:05 
+12:05           SN 3811         null            Brussels                        Previsto:12:05 
+14:20           TK 1449         null            Istanbul, Ataturk                 Previsto:14:20 
+07:35           TO 3408         null            Paris, Orly                     Previsto:07:35 
+12:40           TO 3409         null            Madeira         00:29           Previsto:13:09 
+14:00           TO 3410         null            Paris, Orly     00:29           Previsto:14:29 
+19:05           TO 3411         null            Madeira                         Previsto:19:05 
+08:45           TP 080          null            São Paulo, Guarulhos                 Previsto:08:45 
+09:40           TP 1003         null            Madrid          00:34           Previsto:10:14 
+19:30           TP 1005         null            Madrid          00:41           Previsto:20:11 
+13:00           TP 1031         null            Barcelona                       Previsto:13:00 
+19:35           TP 1033         null            Barcelona                       Previsto:19:35 
+22:10           TP 1710         null            Madeira                         Previsto:22:10 
+09:00           TP 1718         null            Madeira                         Previsto:09:00 
+09:15           TP 1922         null            Lisboa                          Previsto:09:15 
+11:40           TP 1924         null            Lisboa                          Previsto:11:40 
+10:05           TP 1926         null            Lisboa                          Previsto:10:05 
+14:35           TP 1930         null            Lisboa          00:32           Previsto:15:07 
+15:50           TP 1932         null            Lisboa                          Previsto:15:50 
+17:50           TP 1934         null            Lisboa          00:16           Previsto:18:06 
+21:50           TP 1938         null            Lisboa          00:22           Previsto:22:12 
+00:50           TP 1944         null            Lisboa                          Previsto:00:50 
+14:10           TP 331          null            London, Gatwick 00:23           Previsto:14:33 
+22:40           TP 347          null            London, Gatwick                 Previsto:22:40 
+11:25           TP 451          null            Paris, Orly     00:16           Previsto:11:41 
+15:50           TP 453          null            Paris, Orly                     Previsto:15:50 
+21:00           TP 457          null            Paris, Orly                     Previsto:21:00 
+08:05           TP 459          null            Paris, Orly     00:13           Previsto:08:18 
+15:40           TP 603          null            Brussels                        Previsto:15:40 
+20:55           TP 651          null            Amsterdam                       Previsto:20:55 
+21:45           TP 679          null            Luxembourg                      Previsto:21:45 
+22:05           TP 821          null            Milan, Malpensa 00:44           Previsto:22:49 
+15:10           TP 823          null            Milan, Malpensa                 Previsto:15:10 
+14:10           TP 851          null            Rome, Fiumicino                 Previsto:14:10 
+18:10           TP 917          null            Zurich                          Previsto:18:10 
+15:00           TP 939          null            Geneva                          Previsto:15:00 
+21:45           TP 943          null            Geneva                          Previsto:21:45 
+14:05           VY 1985         null            Paris, Orly     00:05           Previsto:14:10 
+13:10           VY 8962         null            Brussels        00:47           Previsto:13:57 
+17:30           ZI 315          null            Paris, Orly                     Previsto:17:30 
