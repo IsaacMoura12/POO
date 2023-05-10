@@ -13,7 +13,10 @@ public class AirportTester {
 
         report.generateReport("src/Aula11/Infopublico.txt");
 
-        report.CalculateDelays();
+        //report.CalculateDelays();
+        report.getAverageDelay();
+
+        report.CityReport("src/Aula11/cidades.txt");
         
     }
     

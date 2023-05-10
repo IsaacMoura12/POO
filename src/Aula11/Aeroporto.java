@@ -9,6 +9,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.TreeMap;
+import java.util.List;
+import java.util.ArrayList;
 
 
 public class Aeroporto {
@@ -178,6 +180,71 @@ public class Aeroporto {
         Integer delay = entry.getValue();
         System.out.println(sigla + " - " + delay + " minutos ");
     }  
+}
+
+public void getAverageDelay(){
+    System.out.println();
+    Map<String, int[]> delays = new LinkedHashMap<>();
+    for (Map.Entry<String, Voo> entry : voos.entrySet()) {
+        Voo voo = entry.getValue();
+        String f_number = voo.getNumber();
+        String delay = voo.getDelay();
+        if (!delay.isEmpty()) {
+            int delayTime = getTimeInMinutes(delay);
+            String name = getCompanyName(f_number, companhias);
+            int[] airlineDelayInfo = delays.getOrDefault(name, new int[]{0, 0});
+            airlineDelayInfo[0] += delayTime;
+            airlineDelayInfo[1] += 1;
+            delays.put(name, airlineDelayInfo);
+        } else {
+            String name = getCompanyName(f_number, companhias);
+            int[] airlineDelayInfo = delays.getOrDefault(name, new int[]{0, 1});
+            delays.put(name, airlineDelayInfo);
+        }
+    }
+
+    System.out.println(String.format("%-25s %-15s", "Companhia", "Atraso Médio"));
+    for (Map.Entry<String, int[]> entry : delays.entrySet()) {
+        String airlineName = entry.getKey();
+        int[] delayInfo = entry.getValue();
+        int totalDelay = delayInfo[0];
+        int numFlights = delayInfo[1];
+        double averageDelay = (double) totalDelay / numFlights;
+        System.out.println(String.format("%-25s %-5f", airlineName, averageDelay));
+
+    }
+}
+
+    public void CityReport(String file){
+        Map<String, Integer> cidades = new TreeMap<>();
+    try {
+        PrintWriter pw = new PrintWriter(new FileWriter(file));
+
+        pw.println(String.format("%-25s %-15s", "Origem", "Voos"));
+        for (Map.Entry<String, Voo> entry : voos.entrySet()) {
+
+            Voo voo = entry.getValue();
+            String origem = voo.getOrigin();
+            int visita = cidades.getOrDefault(origem, 0);
+            cidades.put(origem, visita + 1);
+        }
+
+        // Sort the cities by visit count using a custom Comparator
+        List<Map.Entry<String, Integer>> sortedCidades = new ArrayList<>(cidades.entrySet());
+        sortedCidades.sort(Map.Entry.<String, Integer>comparingByValue().reversed());
+
+        // Write the report to file
+        for (Map.Entry<String, Integer> entry : sortedCidades) {
+            String cidade = entry.getKey();
+            int visitas = entry.getValue();
+            pw.println(String.format("%-25s %-15d", cidade, visitas));
+        }
+        pw.close();
+        System.out.println("Report written to file: " + file);
+    } catch (IOException e) {
+        System.out.println("Error writing report to file: " + file);
+        e.printStackTrace();
+    }
 }
 
 }
