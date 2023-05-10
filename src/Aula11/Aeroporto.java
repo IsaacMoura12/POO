@@ -1,23 +1,22 @@
 package Aula11;
 
 import java.util.Scanner;
+import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.TreeMap;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
-import java.util.ArrayList;
+
 
 public class Aeroporto {
     private Map<String,Companhia> companhias;
     private Map<String, Voo> voos;
 
     Aeroporto(){
-        companhias = new TreeMap<>();
-        voos = new TreeMap<>();
+        companhias = new LinkedHashMap<>();
+        voos = new LinkedHashMap<>();
     }
 
     public void loadVoos(String file){
@@ -52,9 +51,6 @@ public class Aeroporto {
             while(sc.hasNextLine()){
                 String line = sc.nextLine();
                 String[] data = line.split("\t");
-                for(String i : data){
-                    System.out.println(i);
-                }
                 String sigla = data[0];
                 String name = data[1];
                 Companhia companhia = new Companhia(name, sigla);
@@ -68,22 +64,23 @@ public class Aeroporto {
 
     public String getCompanyName(String f_number, Map<String, Companhia> companhias){
         String name = f_number.substring(0, 3);
-        char c2 = name.charAt(1);
-        char c3 = name.charAt(2);
-        if(Character.isDigit(c2) && Character.isDigit(c3)){
-            name = f_number.substring(0, 2);
-        }
-        if(c3 == '\u0000'){
-            name = f_number.substring(0, 2);
-
-        }
-        System.out.println(name);
-        Companhia comp = companhias.get(name);
-        if(comp == null){
-            return null;
-        }
-        System.out.println(comp.getName());
-        return comp.getName();
+    if (Character.isLetter(name.charAt(2))) {
+        // 3rd char is a letter
+        name = f_number.substring(0, 3);
+    } else if (name.charAt(2) == '\u0000') {
+        // only 2 chars in the string
+        name = f_number.substring(0, 2);
+    } else {
+        // 3rd char is a digit
+        name = f_number.substring(0, 2);
+    }
+    
+    Companhia comp = companhias.get(name);
+    if (comp == null) {
+        return "Indisponível";
+    }
+    
+    return comp.getName();
     }
 
     public String getTime(String time, String delay){
@@ -109,19 +106,24 @@ public class Aeroporto {
     public void generateReport(String file){
         try{
             PrintWriter pw = new PrintWriter(new FileWriter(file));
-            pw.println(String.format("%-15s %-15s %-15s %-15s %-15s %-15s", "Hora", "Voo", "Companhia", "Origem", "Atraso", "Obs"));
+            pw.println(String.format("%-15s %-15s %-25s %-25s %-15s %-15s", "Hora", "Voo", "Companhia", "Origem", "Atraso", "Obs"));
 
             for(Map.Entry<String, Voo> entry : voos.entrySet()){
                 Voo voo = entry.getValue();
                 String hora = voo.getTime();
                 String f_number = voo.getNumber();
-                System.out.println(f_number);
                 String name = getCompanyName(f_number, companhias);
                 String origin = voo.getOrigin();
                 String delay = voo.getDelay();
                 String obs = getTime(hora, delay);
-                pw.println(String.format("%-15s %-15s %-15s %-15s %-15s %-15s", hora, f_number, name, origin, delay, "Previsto:" + obs));
+                if(hora.equals(obs)){
+                    pw.println(String.format("%-15s %-15s %-25s %-25s %-15s", hora, f_number, name, origin, delay));
 
+
+                } else{
+                    pw.println(String.format("%-15s %-15s %-25s %-25s %-15s %-15s", hora, f_number, name, origin, delay, "Previsto:  " + obs));
+
+                }
             }
             pw.close();
             System.out.println("Report written to file: " + file);
