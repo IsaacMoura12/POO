@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "AirportTester",
+            "request": "launch",
+            "mainClass": "Aula11.AirportTester",
+            "projectName": "POO_bb10d2b9"
+        },
+        {
+            "type": "java",
             "name": "EnergyUsageReportTester",
             "request": "launch",
             "mainClass": "Aula11.EnergyUsageReportTester",

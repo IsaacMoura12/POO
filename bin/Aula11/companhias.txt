@@ -1,6 +1,6 @@
 Sigla	Companhia
 A5	HOP!
-AE	Air Europa
+AEA	Air Europa
 DT	TAAG
 EV	Evelop Airlines
 EZ	EasyJet Airlines

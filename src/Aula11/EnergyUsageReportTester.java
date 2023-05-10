@@ -38,6 +38,7 @@ public class EnergyUsageReportTester {
 
         // Lists the report on terminal
         energyReport.generateReport();
+        System.out.println();
         
         // Generate a report of all customers and their total energy usage using the generateReport() method
         // Envia o report para o file especificado
