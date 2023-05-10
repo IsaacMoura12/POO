@@ -8,6 +8,7 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.TreeMap;
 
 
 public class Aeroporto {
@@ -150,10 +151,33 @@ public class Aeroporto {
             String delay = voo.getDelay();
             System.out.println(f_number + " - " + hora + " - " + origin + " - " + delay);
         }
-
-
     }
 
+    public void CalculateDelays(){
+        Map<String, Integer> delays = new TreeMap<>();
+        for(Map.Entry<String, Voo> entry : voos.entrySet()){
+            int atraso = 0;
+            Voo voo = entry.getValue();
+            String f_number = voo.getNumber();
+            String delay = voo.getDelay();
+            if(!(delay.isEmpty())){
+                 atraso = atraso +getTimeInMinutes(delay);
+        }
 
-    
+        String name = getCompanyName(f_number, companhias);
+        if(name != null){
+            int currentDelay = delays.getOrDefault(name, 0);
+            delays.put(name, currentDelay + atraso);
+        }
+
+    }
+    System.out.println("Atrasos");
+    for(Map.Entry<String , Integer> entry : delays.entrySet()){
+        
+        String sigla = entry.getKey();
+        Integer delay = entry.getValue();
+        System.out.println(sigla + " - " + delay + " minutos ");
+    }  
+}
+
 }
