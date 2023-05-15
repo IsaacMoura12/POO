@@ -23,17 +23,18 @@ public class Blockbuster {
     public void LoadMovies(String file){
         try(Scanner sc = new Scanner(new File(file))){
             sc.nextLine(); // skip header
-
+            while(sc.hasNextLine()){
             String line = sc.nextLine();
             String [] data = line.split("\t");
             String name = data[0];
             double score = Double.parseDouble(data[1]);
-            String genre = data[2];
-            int time = Integer.parseInt(data[3]);
+            String rating = data[2];
+            String genre = data[3];
+            int time = Integer.parseInt(data[4]);
 
-            Movie movie = new Movie(name, score, genre, time);
+            Movie movie = new Movie(name, score,rating, genre, time);
             movies.put(name, movie);
-
+        }
         }catch (FileNotFoundException e){
             System.out.println("File not Found" + e.getMessage());
 
@@ -87,7 +88,7 @@ public void BestMoviesReport(String file, String genre, int score){
     Map<String,Movie> report = findMoviesByGenreAndScore(genre, score);
     try{
         PrintWriter pw = new PrintWriter(new FileWriter(file));
-        pw.println(String.format("%\ts %\tf %\ts %\tf", "Name", "Score", "Genre", "Running Time"));
+        pw.println(String.format("%s\t%s\t%s\t%s\t%s\t", "Name", "Score", "Rating", "Genre", "Running Time"));
 
         for (Map.Entry<String,Movie> entry : report.entrySet()){
             Movie movie = entry.getValue();
@@ -95,10 +96,10 @@ public void BestMoviesReport(String file, String genre, int score){
             double scores = movie.getScore();
             String genres = movie.getGenre();
             int time = movie.getTime();
-            pw.println(genres);
+            String rating = movie.getRating();
+            pw.println(String.format("%s\t%.1f\t%s\t%s\t%d", name, scores,rating,genres,time));
+            
         }
-
-        
 
         pw.close();
         System.out.println("Report written to file: " + file);

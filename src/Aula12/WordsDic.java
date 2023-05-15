@@ -52,7 +52,7 @@ public class WordsDic {
             }
             pw.close();
 
-
+            System.out.println("Report written in file " + file);
         } catch(IOException e){
             System.out.println("Error writing report to file: " + file);
             e.printStackTrace();

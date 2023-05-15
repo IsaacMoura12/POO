@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BlockbusterTester",
+            "request": "launch",
+            "mainClass": "Aula12.BlockbusterTester",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
             "name": "WordsDic",
             "request": "launch",
             "mainClass": "Aula12.WordsDic",

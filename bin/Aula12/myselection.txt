@@ -1,0 +1,3 @@
+Name	Score	Rating	Genre	Running Time	
+The Hulk	61,0	PG-13	action	138
+The Italian Job	66,5	PG-13	action	111
