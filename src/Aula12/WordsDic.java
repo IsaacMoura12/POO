@@ -14,7 +14,7 @@ public class WordsDic {
         Map<Character, Map<String, Integer>> words = new TreeMap<>();
 
         try(Scanner sc = new Scanner(new File("src/Aula12/A_cidade_e_as_serras.txt"))){
-            sc.useDelimiter("[\\s.,:'‘’;?!-*{}=+&/()”“\"\']+");
+            sc.useDelimiter("[\\s.,:'‘’;?!-*{}»«=+&/()”“\"\']+");
             while(sc.hasNext()){
                 String word = sc.next();
                 word = word.toLowerCase();
