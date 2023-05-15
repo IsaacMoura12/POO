@@ -15,7 +15,7 @@ public class WordCounter {
 
 
         try(Scanner sc = new Scanner(new File("src/Aula12/words.txt"))){
-            sc.useDelimiter(" ");
+            sc.useDelimiter("\\s+");
             while(sc.hasNext()){
                 String word = sc.next();
                 
