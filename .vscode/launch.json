@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "WordsDic",
+            "request": "launch",
+            "mainClass": "Aula12.WordsDic",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "WordCounter",
+            "request": "launch",
+            "mainClass": "Aula12.WordCounter",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "AirportTester",
+            "request": "launch",
+            "mainClass": "Aula11.AirportTester",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
+            "name": "EnergyUsageReportTester",
+            "request": "launch",
+            "mainClass": "Aula11.EnergyUsageReportTester",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
             "name": "AirportTester",
             "request": "launch",
             "mainClass": "Aula11.AirportTester",
