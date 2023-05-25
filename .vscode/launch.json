@@ -9,6 +9,13 @@
             "name": "Main",
             "request": "launch",
             "mainClass": "Avaliacao22.Main",
+            "projectName": "POO_bb10d2b9"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Avaliacao22.Main",
             "projectName": "POO_480452c"
         },
         {

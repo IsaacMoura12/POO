@@ -1,5 +1,6 @@
 package Avaliacao22;
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Contact {
     private static int idIterator = 0;
@@ -67,10 +68,14 @@ public class Contact {
         Contact that = (Contact) other;
         return this.name.equals(that.name) && this.phoneNumber==that.phoneNumber && this.birthDate.equals(that.birthDate) && this.email.equals(that.email);
 
-
     }
 
-// fazer hash
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, phoneNumber, email, birthDate);
+    }
+
+
 
 
 
