@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Avaliacao22.Main",
+            "projectName": "POO_480452c"
+        },
+        {
+            "type": "java",
             "name": "BlockbusterTester",
             "request": "launch",
             "mainClass": "Aula12.BlockbusterTester",
