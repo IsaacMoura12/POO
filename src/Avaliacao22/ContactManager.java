@@ -21,6 +21,7 @@ public class ContactManager implements ContactManagerInterface {
         agenda  = new TreeMap<>();
     }
 
+    @Override
     public void load(String filePath){
 
         try(Scanner sc = new Scanner(new File(filePath))){
@@ -46,6 +47,7 @@ public class ContactManager implements ContactManagerInterface {
 
     }
 
+    @Override
     public void save(String filePath){
 
         try{
@@ -73,6 +75,7 @@ public class ContactManager implements ContactManagerInterface {
 
     }
 
+    @Override
     public boolean validateEmail(String email){
         String regex = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$"; 
         Pattern pattern = Pattern.compile(regex);
@@ -80,6 +83,7 @@ public class ContactManager implements ContactManagerInterface {
         return matcher.matches();
     }
 
+    @Override
     public boolean validatePhoneNumber(String phoneNumber){
         if(phoneNumber.length()!=9){
             return false;
@@ -98,6 +102,7 @@ public class ContactManager implements ContactManagerInterface {
 
     }
 
+    @Override
     public boolean addContact(Contact person){
 
         if (agenda.containsValue(person)){
@@ -109,6 +114,7 @@ public class ContactManager implements ContactManagerInterface {
         }
     }
 
+    @Override
     public boolean  removeContact(Contact person){
         if(!(agenda.containsValue(person))){
             return false;
@@ -120,6 +126,7 @@ public class ContactManager implements ContactManagerInterface {
 
     }
 
+    @Override
     public Contact searchContactByname(String name){
         for(Map.Entry<Integer, Contact> entry : agenda.entrySet()){
             Contact contact = entry.getValue();
@@ -132,6 +139,7 @@ public class ContactManager implements ContactManagerInterface {
 
     }
 
+    @Override
    public Contact searchContactByEmail(String email){
 
     for(Map.Entry<Integer, Contact> entry : agenda.entrySet()){
@@ -145,6 +153,7 @@ public class ContactManager implements ContactManagerInterface {
 
     }
 
+    @Override
      public Contact searchContactByPhoneNumber(int phoneNumber){
 
         for(Map.Entry<Integer, Contact> entry : agenda.entrySet()){
@@ -158,6 +167,7 @@ public class ContactManager implements ContactManagerInterface {
      }
 
 
+     @Override
      public void listAllContacts(){
         for(Map.Entry<Integer, Contact> entry : agenda.entrySet()){
             Contact contact = entry.getValue();
@@ -166,7 +176,7 @@ public class ContactManager implements ContactManagerInterface {
 
      }
 
-
+     @Override
      public void listContactsByName(){
 
         Map<String, Contact> tmp = new TreeMap<>();
@@ -186,6 +196,7 @@ public class ContactManager implements ContactManagerInterface {
      }
 
 
+     @Override
      public void listContactsByPhoneNumber(){
 
         Map<Integer, Contact> tmp = new TreeMap<>();
@@ -206,6 +217,7 @@ public class ContactManager implements ContactManagerInterface {
      }
 
 
+     @Override
      public void listContactsByBirthDate(){
 
         Map<LocalDate, Contact> tmp = new TreeMap<>();
