@@ -1,6 +1,6 @@
 package Avaliacao22;
 import java.time.LocalDate;
-import java.util.Objects;
+//import java.util.Objects;
 
 public class Contact {
     private static int idIterator = 0;
@@ -70,14 +70,19 @@ public class Contact {
 
     }
 
+    //@Override
+    //public int hashCode() {
+     //   return Objects.hash(name, phoneNumber, email, birthDate);
+    //}
+
     @Override
     public int hashCode() {
-        return Objects.hash(name, phoneNumber, email, birthDate);
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((name==null) ? 0 : name.hashCode());
+        result = prime * result + phoneNumber;
+        result = prime * result + ((email== null) ? 0 : email.hashCode());
+        return result;
     }
-
-
-
-
-
 
 }
